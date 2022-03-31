@@ -1,0 +1,57 @@
+@startuml
+
+package "Core Ports" <<Rectangle>> {
+
+interface Track {
+	String artistName
+   	String trackName
+  	String collectionName
+	int trackNumber
+	int discNumber
+  	String artworkUrl
+}
+
+
+interface TrackCollection {
+	String name
+	Track[] tracks
+}
+
+package "driving" <<Rectangle>> {
+    interface SearchTerm {
+        string term
+    }
+
+    interface SearchTracksCommand {
+            {method} Execute(SearchTerm inDTO, (TrackCollection[] -> void) successHandler,
+            (Exception -> void) errorHandler)
+    }
+
+}
+
+package "driven" <<Rectangle>> {
+        interface TunesSearchEngine {
+            Track[] GetSongs(string term)
+        }
+
+        
+
+}
+
+}
+
+package "Core" <<Rectangle>> {
+    class "SearchTracksCommand" as CommandHandler {
+        TunesSearchEngine searchEngine
+    }
+}
+
+
+CommandHandler ..|> SearchTracksCommand
+CommandHandler -> TunesSearchEngine
+SearchTracksCommand -- SearchTerm
+TunesSearchEngine -- Track
+SearchTracksCommand -- TrackCollection
+TrackCollection "1" - "1..*" Track
+@enduml
+

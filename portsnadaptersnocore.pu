@@ -1,0 +1,66 @@
+@startuml
+
+package "User Interface" <<Rectangle>> {
+    class View
+    class IncomingModelDTO {
+    }
+    class Model
+}
+
+package "Ports (driving)" <<Rectangle>> {
+    interface IncomingModel {
+    }
+
+    interface OutgoingModel {
+    }
+
+}
+
+package "Ports (driven)" <<Rectangle>> {
+        interface InfrastructureInterface {
+            {method} operation
+        }
+
+        interface BusinessModel
+}
+
+together {
+package "Infrastructure Adapters" <<Rectangle>> {
+        class InfrastructureAdapter {
+            private InfrastructureImplementation adaptee
+            {method} operation
+        }
+
+        class "BusinessModelAdapter" as ConcreteBusinessModel {
+    }
+
+        class "OutgoingModel" as ConcreteOutgoingModel {
+    }
+
+}
+
+package "Infrastructure" <<Rectangle>> {
+    class InfrastructureImplementation 
+
+    class InfrastructureModel
+}
+}
+
+InfrastructureAdapter ..|> InfrastructureInterface
+InfrastructureAdapter -> InfrastructureImplementation
+View -> IncomingModelDTO
+View -> InfrastructureInterface
+InfrastructureInterface -> IncomingModel
+InfrastructureInterface -> OutgoingModel
+IncomingModelDTO ..|> IncomingModel 
+ConcreteOutgoingModel ..|> OutgoingModel
+Model .. OutgoingModel
+View -> Model
+InfrastructureInterface -> BusinessModel
+ConcreteBusinessModel ..|> BusinessModel 
+InfrastructureAdapter -> ConcreteBusinessModel
+ConcreteBusinessModel -> InfrastructureModel
+InfrastructureImplementation -> InfrastructureModel 
+View ..> InfrastructureAdapter : use (injected by build target)
+@enduml
+

@@ -1,0 +1,49 @@
+@startsalt
+title Stundenplan
+header SCR01
+footer Low-fi prototype (wireframe)
+{+
+{
+    .
+    .     | Mo  | Di      | Mi   | Do      | Fr
+    8:00  | iOS | .       | iOS  | .       | .
+    9:00  | Dev | .       | Dev  | .       | .
+    10:00 | VL  | .       | ÜB   | .       | .
+    11:00 | .   | .       | .    | .       | .
+    12:00 | .   | Android | .    | Android | .  
+    13:00 | .   | Dev     | .    | Dev     | .  
+    14:00 | .   | VL      | .    | ÜB      | .  
+    15:00 | .   | .       | .    | .       | .
+    16:00 | .   | .       | .    | .       | .
+    17:00 | .   | .       | .    | .       | .
+    18:00 | .   | .       | .    | .       | .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+}
+{/ <b>Stundenplan | Mensa | Quiz | Profs | Einstellungen }
+}
+@endsalt
+

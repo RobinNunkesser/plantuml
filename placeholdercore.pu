@@ -1,0 +1,51 @@
+@startuml
+
+package "Core Ports" <<Rectangle>> {
+
+interface Post {
+            int userId
+            int id
+            string title
+            string body
+        }
+
+package "driving" <<Rectangle>> {
+    interface GetPostDTO {
+        int id
+    }
+
+    interface GetPostCommand {
+            {method} Post Execute(GetPostDTO inDTO)
+    }
+
+}
+
+package "driven" <<Rectangle>> {
+        interface PostCrudRepository {
+            int create(Post post)
+            Post retrieve(int id)
+            Post[] retrieveAll()
+            bool update(int id, Post post)
+            bool delete(int id)
+        }
+
+        
+
+}
+
+}
+
+package "Core" <<Rectangle>> {
+    class "GetPostCommand" as CommandHandler {
+        PostCrudRepository repository
+    }
+}
+
+
+CommandHandler ..|> GetPostCommand
+CommandHandler -> PostCrudRepository
+GetPostCommand -- GetPostDTO
+PostCrudRepository -- Post
+GetPostCommand -- Post
+@enduml
+

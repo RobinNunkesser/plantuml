@@ -1,0 +1,13 @@
+@startuml
+
+[UI]
+[Use Cases] as UC
+[Database]
+[Frameworks]
+
+UI --> UC
+Database --> UC
+Frameworks --> UC
+
+@enduml
+

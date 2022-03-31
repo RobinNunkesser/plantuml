@@ -1,0 +1,44 @@
+@startuml
+
+package "Delivery Mechanism" <<Rectangle>> {
+class ClassA 
+class ClassB 
+}
+note bottom of ClassA: User Interaction
+
+together {
+interface BoundaryIn
+class Request
+}
+together {
+interface BoundaryOut
+class Response
+}
+
+package "Use Cases" <<Rectangle>> {
+class Interactor
+}
+package "Entities" <<Rectangle>> {
+class Entity1
+class Entity2
+class Entity3
+}
+
+Request - ClassA
+Request - BoundaryIn
+Response - BoundaryOut
+Response - ClassA
+Response - ClassB
+Response - Interactor
+ClassA - ClassB
+ClassA - BoundaryIn
+BoundaryOut <|.. ClassA
+BoundaryOut <|.. ClassB
+BoundaryIn <|.. Interactor
+BoundaryOut - Interactor
+Interactor o-- Entity1
+Interactor o-- Entity2
+Interactor o-- Entity3
+
+@enduml
+

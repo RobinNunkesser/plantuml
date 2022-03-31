@@ -1,0 +1,82 @@
+@startuml
+
+package "User Interface" <<Rectangle>> {
+    class View
+    class IncomingModelDTO {
+    }
+    class Model
+}
+
+together {
+package "Core Ports (driving)" <<Rectangle>> {
+    interface IncomingModel {
+    }
+
+    interface OutgoingModel {
+    }
+
+    interface CoreService {
+            {method} execute
+    }
+
+}
+
+package "Core" <<Rectangle>> {
+
+    class "CoreService" as CommandHandler {
+        InfrastructureInterface infrastructure
+        {method} execute
+    }
+
+    class "OutgoingModel" as ConcreteOutgoingModel {
+    }
+}
+
+package "Core Ports (driven)" <<Rectangle>> {
+        interface InfrastructureInterface {
+            {method} operation
+        }
+
+        interface BusinessModel
+}
+}
+
+
+package "Infrastructure Adapters" <<Rectangle>> {
+        class InfrastructureAdapter {
+            private InfrastructureImplementation adaptee
+            {method} operation
+        }
+
+        class "BusinessModelAdapter" as ConcreteBusinessModel {
+    }
+}
+
+package "Infrastructure" <<Rectangle>> {
+    class InfrastructureImplementation 
+
+    class InfrastructureModel
+}
+
+InfrastructureAdapter ..|> InfrastructureInterface
+InfrastructureAdapter -> InfrastructureImplementation
+View -> IncomingModelDTO
+View -> CoreService
+CoreService -> IncomingModel
+CoreService -> OutgoingModel
+IncomingModelDTO ..|> IncomingModel 
+CommandHandler ..|> CoreService
+ConcreteOutgoingModel ..|> OutgoingModel
+CommandHandler -> InfrastructureInterface
+CommandHandler -> ConcreteOutgoingModel
+View ..> CommandHandler : use (injected)
+CommandHandler ..> InfrastructureAdapter : use (injected)
+Model .. OutgoingModel
+View -> Model
+InfrastructureInterface -> BusinessModel
+ConcreteBusinessModel ..|> BusinessModel 
+InfrastructureAdapter -> ConcreteBusinessModel
+ConcreteBusinessModel -> InfrastructureModel
+InfrastructureImplementation -> InfrastructureModel 
+@enduml
+

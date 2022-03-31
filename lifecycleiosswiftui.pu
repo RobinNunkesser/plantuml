@@ -1,0 +1,22 @@
+@startuml
+
+partition Application {
+(*) --> "init"
+}
+partition Scene {
+"init" --> "Active"    
+"Active" --> "Inactive"
+"Active" --> "Background"
+"Background" --> "Active"
+"Inactive" --> "Active"
+"Inactive" --> "Background"
+}
+partition View {
+"Active" --> "Appear" 
+"Disappear" --> "Appear"
+"Appear" --> "Custom Events"
+"Custom Events" --> "Custom Events"
+"Custom Events" --> "Disappear"
+}
+
+@enduml

@@ -1,0 +1,86 @@
+@startuml
+
+package "User Interface (Console)" <<Rectangle>> {
+    class "Program" as View
+}
+
+
+package "Core Ports (driving)" <<Rectangle>> {
+
+    interface ITask
+    {
+        ITaskTextGenerator TextGenerator 
+        ITaskSolver Solver
+        int Score
+        string Topic 
+        ITaskText Text 
+    }
+
+    interface ITaskText
+    {
+        string Solution 
+        string Problem 
+        string Form 
+    }
+
+    interface IExam
+    {
+        Boolean Mock 
+        string Lecture 
+        string Student 
+        List<ITask> Tasks 
+        string FileName 
+    }
+
+    interface "IExamGenerator" as CoreService {
+        IStudentRepository studentRepository
+        IExamExporter ExamExporter 
+        {method} Execute(ExamType type, (Boolean -> void) successHandler,
+            (Exception -> void) errorHandler)
+    }
+
+    enum ExamType {
+        ExamFoo
+        ExamBar
+    }
+
+}
+
+package "Core Ports (driven)" <<Rectangle>> {        
+
+    interface "IStudentRepository" as InfrastructureInterface
+    {
+        List<String> Retrieve()
+    }
+
+    interface IExamExporter
+    {
+        void Export(IExam exams);
+    }
+
+    interface ITaskTextGenerator 
+    {
+        ITaskText Generate(ITask task);
+    }
+
+    interface ITaskSolver<T>
+    {
+        T Solve(ITask task)
+    }
+
+}
+
+
+View -> CoreService
+IExam -> ITask
+CoreService -> IExam
+ITask -> ITaskText
+CoreService -> InfrastructureInterface
+CoreService -> IExamExporter
+CoreService -> ExamType
+ITask -> ITaskSolver
+ITask -> ITaskTextGenerator
+View .[hidden].> ITask 
+ITask .[hidden].> IExamExporter
+@enduml
+

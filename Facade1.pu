@@ -1,0 +1,90 @@
+@startuml
+
+class Amplifier {
+	tuner
+	dvdPlayer
+	cdPlayer
+	on()
+	off()
+	setCd()
+	setDvd()
+	setStereoSound()
+	setSurroundSound()
+	setTuner()
+	setVolume()
+	toString()
+}
+
+class Tuner {
+	amplifier
+	on()
+	off()
+	setAm()
+	setFm()
+	setFrequency()
+	toString()
+}
+
+class Screen {
+	up()
+	down()
+	toString()
+}
+
+class PopcornPopper {
+	on()
+	off()
+	pop()
+	toString()
+}
+
+class CdPlayer {
+	amplifier
+	on()
+	off()
+	eject()
+	pause()
+	play()
+	stop()
+	toString()
+}
+
+class TheaterLights {
+	on()
+	off()
+	dim()
+	toString()
+}
+
+class DvdPlayer {
+	amplifier
+	on()
+	off()
+	eject()
+	pause()
+	play()
+	setSurroundAudio()
+	setTwoChannelAudio()
+	stop()
+	toString()
+}
+
+class Projector {
+	dvdPlayer
+	on()
+	off()
+	tvMode()
+	wideScreenMode()
+	toString()
+}
+
+Amplifier --> Tuner
+Tuner --> Amplifier
+CdPlayer --> Amplifier
+Amplifier --> CdPlayer
+Amplifier --> DvdPlayer
+DvdPlayer --> Amplifier
+Projector --> DvdPlayer
+
+@enduml
+

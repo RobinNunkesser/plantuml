@@ -1,0 +1,19 @@
+@startuml
+
+class Button {	
+	Poll()
+}
+
+interface ButtonServer {
+	TurnOn()
+	TurnOff()
+}
+
+class Lamp {
+}
+
+Button --> ButtonServer
+Lamp ..|> ButtonServer
+
+@enduml
+

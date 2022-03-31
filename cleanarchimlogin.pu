@@ -1,0 +1,24 @@
+@startuml
+
+participant "AppShell" as Shell
+participant "LoginPage" as Page
+
+autonumber
+Shell -> GetActiveUserService : Execute
+GetActiveUserService -> IUserGateway : GetActiveUser
+create Result
+IUserGateway -> Result : new
+IUserGateway -> GetActiveUserService
+GetActiveUserService -> Shell
+create Page
+Shell -> Page : new
+Shell -> Page : PushModalAsync
+create LoginRequest
+Page -> LoginRequest : new
+Page -> LoginUserService : Execute
+LoginUserService -> IUserGateway : LoginUser
+create "Result" as LoginResult
+IUserGateway -> LoginResult : new
+IUserGateway -> LoginUserService
+LoginUserService -> Page
+@enduml

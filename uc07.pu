@@ -1,0 +1,7 @@
+@startuml
+
+start
+:Nutzer wählt gewünschten Professor aus;
+:Basisinformationen sind verfügbar (Fachgebiet, E-Mail, Raumnummer, Telefonnummer);
+stop
+@enduml

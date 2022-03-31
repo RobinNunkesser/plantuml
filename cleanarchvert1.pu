@@ -1,0 +1,58 @@
+@startuml
+
+together {
+package "Use Cases" <<Rectangle>> {
+interface UseCase {
+	{method} execute(Request)
+}
+
+class UCInteractor {
+	{field} Presenter presenter
+	{method} execute(UCRequest)
+}
+}
+
+class UCInteractorTests
+}
+
+together {
+package "Datasources" <<Rectangle>> {
+interface UCGateway {
+	{method} async fetch() : UCEntity[]
+}
+class ConcreteUCGateway {
+	{method} async fetch() : UCEntity[]
+}
+
+}
+
+class UCGatewayTests
+}
+
+together {
+package "Display" <<Rectangle>> {
+
+interface Presenter<Model,ViewModel> {
+	{method} present(Model) : ViewModel
+}
+
+class UCPresenter {
+	{method} present(UCModel) : UCViewModel
+}
+}
+
+class UCPresenterTests
+}
+
+UCGatewayTests -> ConcreteUCGateway
+UCInteractorTests -> UCInteractor
+UCPresenterTests -> UCPresenter
+UCGateway .. UCInteractor 
+UCInteractor ..|> UseCase
+ConcreteUCGateway ..|> UCGateway
+UCPresenter ..|> Presenter
+UCInteractor .. UCPresenter
+
+
+@enduml
+

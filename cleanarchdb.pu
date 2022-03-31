@@ -1,0 +1,28 @@
+@startuml
+
+interface EntityGateway
+package "Use Cases" <<Rectangle>> {
+class Interactor
+}
+package "Entities" <<Rectangle>> {
+class Entity1
+class Entity2
+class Entity3
+}
+
+package "Database" <<Rectangle>> {
+class EntityGatewayImpl
+class DatabaseAPI
+}
+
+EntityGateway - Interactor
+Interactor o-- Entity1
+Interactor o-- Entity2
+Interactor o-- Entity3
+EntityGatewayImpl - DatabaseAPI
+EntityGatewayImpl - Entity1
+EntityGatewayImpl - Entity2
+EntityGatewayImpl - Entity3
+EntityGateway ..|> EntityGatewayImpl
+@enduml
+

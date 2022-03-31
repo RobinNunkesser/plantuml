@@ -1,0 +1,20 @@
+@startuml
+
+abstract class Subject {
+	{abstract} {method} request()
+}
+
+class Proxy {
+	{method} request()
+}
+
+class RealSubject {
+	{method} request()
+}
+
+Subject <|-- Proxy
+Subject <|-- RealSubject
+RealSubject -- Proxy
+
+@enduml
+

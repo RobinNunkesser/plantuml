@@ -1,0 +1,13 @@
+@startuml
+
+participant Alice
+participant Bob
+
+autonumber
+Alice -> Bob : Nutzdaten 1000 Byte, ACK=0 SYN=0 FIN=0 Seq=101 Ack=501
+activate Bob
+return Nutzdaten 0 Byte, ACK=1 SYN=0 FIN=0 Seq=? Ack=?
+Alice -> Bob : Nutzdaten 1000 Byte, ACK=0 SYN=0 FIN=0 Seq=? Ack=?
+activate Bob
+return Nutzdaten 0 Byte, ACK=1 SYN=0 FIN=0 Seq=? Ack=?
+@enduml

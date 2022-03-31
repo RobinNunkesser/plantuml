@@ -1,0 +1,35 @@
+@startuml
+
+together {
+abstract class Subject {
+	Attach(Observer)
+	Detach(Observer)
+	Notify()
+}
+
+abstract class Observer {
+	Update()
+}
+
+}
+
+together {
+
+class ConcreteSubject {
+	state
+	getState()
+	void setState(state)
+}
+
+class ConcreteObserver {
+	Update()
+}
+}
+
+Subject <|-- ConcreteSubject
+Observer <|-- ConcreteObserver
+Subject -- Observer
+ConcreteSubject -- ConcreteObserver
+
+@enduml
+

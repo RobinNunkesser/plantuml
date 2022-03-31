@@ -1,0 +1,30 @@
+@startuml
+
+class Client {
+}
+
+class Facade {
+}
+
+package Subsystem <<Rectangle>> {
+  class ClassA
+  class ClassB
+  class ClassC
+  class ClassD
+  class ClassE
+  class ClassF
+}
+
+Client -- Facade
+Facade -- ClassA
+Facade -- ClassB
+ClassA -- ClassB
+ClassA -- ClassC
+ClassB -- ClassD
+ClassC -- ClassF
+ClassC -- ClassE
+ClassD -- ClassF
+ClassD -- ClassE
+
+@enduml
+

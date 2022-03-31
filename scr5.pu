@@ -1,0 +1,52 @@
+@startsalt
+title Einstellungen
+header SCR05
+footer Low-fi prototype (wireframe)
+{+
+{
+    .
+    Statusgruppe | <&chevron-right>
+    ----
+    Allergene | <&chevron-right>
+    ----
+    Zusatzstoffe | <&chevron-right>
+    ----
+    Studiengang | <&chevron-right>
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .      
+}
+{/ Stundenplan | Mensa | Quiz | Profs | <b> Einstellungen }
+}
+
+@endsalt
+

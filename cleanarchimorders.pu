@@ -1,0 +1,21 @@
+@startuml
+
+participant "ItemInfoPage" as Page
+
+autonumber
+create ItemRequest
+Page -> ItemRequest : new
+Page -> GetItemOrdersService : Execute
+GetItemOrdersService -> IItemDataGateway : GetItem
+create Result
+IItemDataGateway -> Result : new
+IItemDataGateway -> GetItemOrdersService
+GetItemOrdersService -> ItemOrdersPresenter : Present
+create ItemOrdersViewModel
+ItemOrdersPresenter -> ItemOrdersViewModel : new
+ItemOrdersPresenter -> GetItemOrdersService
+GetItemOrdersService -> Page
+create ItemOrdersPage
+Page -> ItemOrdersPage : new
+Page -> ItemOrdersPage : PushModalAsync
+@enduml

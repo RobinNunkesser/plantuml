@@ -1,0 +1,45 @@
+@startuml
+
+
+package "Display" <<Rectangle>> {
+class View
+class ViewModel
+class Presenter
+}
+note bottom of View: User Interaction
+
+together {
+interface BoundaryIn
+class Request
+}
+together {
+interface BoundaryOut
+class Response
+}
+
+package "Use Cases" <<Rectangle>> {
+class Interactor
+}
+package "Entities" <<Rectangle>> {
+class Entity1
+class Entity2
+class Entity3
+}
+
+Request - View
+Request - BoundaryIn
+Response - BoundaryOut
+Response - Presenter
+Response - Interactor
+View - BoundaryIn
+BoundaryOut <|.. Presenter
+BoundaryIn <|.. Interactor
+BoundaryOut - Interactor
+Presenter - ViewModel
+View - ViewModel
+Interactor o-- Entity1
+Interactor o-- Entity2
+Interactor o-- Entity3
+
+@enduml
+

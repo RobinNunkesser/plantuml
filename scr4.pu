@@ -1,0 +1,50 @@
+@startsalt
+title Professoren
+header SCR04
+footer Low-fi prototype (wireframe)
+{+
+{
+    .
+    "Name" | <&magnifying-glass>
+    Prof. Dr. Bernasconi | <&chevron-right>
+    Mobile Computing | .
+    ----
+    Prof. Dr. Moriarty | <&chevron-right>
+    Mathematik | .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .    
+}
+{/ Stundenplan | Mensa | Quiz | <b> Profs | Einstellungen }
+}
+
+@endsalt
+

@@ -1,0 +1,60 @@
+@startuml
+
+package "User Interface" <<Rectangle>> {
+    class View
+    class "SearchTermDTO" as ConcreteDTO {
+    }
+
+    class CollectionViewModel {
+	String name
+	TrackViewModel[] tracks
+}
+
+class TrackViewModel {
+	String title
+	String subtitle
+	URL image	
+}
+
+}
+
+package "Core Ports" <<Rectangle>> {
+
+interface Track {
+	String artistName
+   	String trackName
+  	String collectionName
+	int trackNumber
+	int discNumber
+  	String artworkUrl
+}
+
+interface TrackCollection {
+	String name
+	Track[] tracks
+}
+
+package "driving" <<Rectangle>> {
+    interface SearchTerm {
+        string term
+    }
+
+    interface SearchTracksCommand {
+            {method} Execute(SearchTerm inDTO, (TrackCollection[] -> void) successHandler,
+            (Exception -> void) errorHandler)
+    }
+
+}
+}
+
+
+View -> ConcreteDTO
+View -> SearchTracksCommand
+View -- CollectionViewModel
+ConcreteDTO ..|> SearchTerm 
+SearchTracksCommand -- SearchTerm
+SearchTracksCommand -- TrackCollection
+CollectionViewModel "1" - "1..*" TrackViewModel
+TrackCollection "1" - "1..*" Track
+@enduml
+

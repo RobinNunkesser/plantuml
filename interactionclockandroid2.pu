@@ -1,0 +1,18 @@
+@startuml
+
+state "<<modal>>\nNew Alarm" as NewAlarm
+state "<<webview>>\nHelp" as Help
+state "<<modal>>\nChoose Sound" as ChooseSound
+
+state Tabs {
+state "Stop Watch" as StopWatch
+state "World Clock" as WorldClock
+state Timer
+state Alarm
+}
+[*] --> WorldClock
+Alarm --> NewAlarm : tap[Add Button]
+Alarm --> Help : select[Help]
+Alarm --> Settings : select[Settings]
+Alarm --> ChooseSound : tap[Current sound]
+@enduml

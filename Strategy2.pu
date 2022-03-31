@@ -1,0 +1,27 @@
+@startuml
+
+abstract class Duck {
+	{method} quack()
+	{method} swim()
+	{abstract} {method} display()
+	{method} fly()	
+}
+
+class MallardDuck {
+	{method} display()
+}
+
+class RedheadDuck {
+	{method} display()
+}
+
+class "..." as MoreDucks {
+	{method} display()
+}
+
+Duck <|-- RedheadDuck
+Duck <|-- MallardDuck
+Duck <|-- MoreDucks
+
+@enduml
+

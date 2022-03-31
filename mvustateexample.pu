@@ -1,0 +1,14 @@
+@startuml
+
+left to right direction
+
+[*] --> State1
+State1 : isLoggedIn = false
+State1 : numberOfPosts = 0
+State1 --> State2 : Login
+State2 : isLoggedIn = true
+State2 : numberOfPosts = 0
+State2 --> State3 : Write Post
+State3 : isLoggedIn = true
+State3 : numberOfPosts = 1
+@enduml

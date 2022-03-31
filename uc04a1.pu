@@ -1,0 +1,13 @@
+@startuml
+
+start
+:Quizfrage wird angezeigt;
+if () then
+stop
+else
+:Nutzer möchte Quizfrage überspringen;
+:Neue Quizfrage wird angezeigt;
+endif
+stop
+@enduml
+

@@ -1,0 +1,15 @@
+@startuml
+
+class Button {	
+	Poll()
+}
+
+class Lamp {
+	TurnOn()
+	TurnOff()
+}
+
+Button --> Lamp
+
+@enduml
+

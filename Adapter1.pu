@@ -1,0 +1,36 @@
+@startuml
+
+interface Duck {
+	{method} quack()
+	{method} fly()
+}
+
+class MallardDuck {
+	{method} quack()
+	{method} fly()
+}
+
+interface Turkey {
+	{method} gobble()
+	{method} fly()
+}
+
+class WildTurkey {
+	{method} gobble()
+	{method} fly()
+}
+
+class TurkeyAdapter {
+	Turkey turkey 
+	{method} quack()
+	{method} fly()
+}
+
+
+Turkey <|.. WildTurkey
+Duck <|.. MallardDuck
+Duck <|.. TurkeyAdapter
+Turkey -- TurkeyAdapter
+
+@enduml
+

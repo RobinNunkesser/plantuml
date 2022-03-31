@@ -1,0 +1,46 @@
+@startuml
+
+package "UI" <<Rectangle>> {
+class View 
+class Controller
+class ViewModel 
+}
+note bottom of View: User Interaction
+
+
+package "Application" <<Rectangle>> {
+interface "Application Service" as IAppServ
+class "Application Service" as AppServ
+interface "Repository" as IRepository
+class "Repository" as Repository
+interface Persistence
+class "Application Event" as AppEvent
+interface "Event Dispatcher" as EventDispatch
+}
+package "Infrastructure" <<Rectangle>> {
+class "Persistance Adapter" as PersAda
+class "Event Dispatcher Adapter" as EventDispatchAdapter
+}
+package "Domain" <<Rectangle>> {
+    class "Domain Service" as DomainServ
+    class Entity
+    class "Domain Event" as DomainEvent
+}
+
+Controller -> View
+Controller -> ViewModel
+Controller -> IAppServ
+IAppServ <|.. AppServ
+AppServ -> AppEvent
+AppServ -> IRepository
+AppServ -> EventDispatch 
+IRepository <|.. Repository
+EventDispatch <|.. EventDispatchAdapter
+Repository -> Persistence
+Persistence <|.. PersAda
+DomainServ -> Entity
+AppServ -> DomainServ
+AppServ -> Entity
+PersAda -> DomainEvent
+@enduml
+

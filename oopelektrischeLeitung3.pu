@@ -1,0 +1,26 @@
+@startuml
+
+class ElektrischeLeitung {
+  strom
+  widerstand
+  spannung
+  leistung
+  an()
+  aus()
+  energieverbrauchBerechnen(zeit)
+  leistungBerechnen()
+  kostenBerechnen()  
+}
+
+object e1 {
+  spannung = 230 V
+  widerstand = 1 Ohm
+}
+
+object e2 {
+  spannung = 12 V
+  widerstand = 100 Ohm
+}
+
+@enduml
+

@@ -1,0 +1,34 @@
+@startuml
+
+package "UI" <<Rectangle>> {
+class View 
+class Controller
+class ViewModel 
+}
+note bottom of View: User Interaction
+
+
+package "Application" <<Rectangle>> {
+interface "Query" as IQuery
+class "Query" as Query
+interface "Repository" as IRepository
+class "Repository" as Repository
+interface Persistence
+class DTO
+}
+package "Infrastructure" <<Rectangle>> {
+class "Persistance Adapter" as PersAda
+}
+
+Controller -> View
+Controller -> ViewModel
+Controller -> IQuery
+IQuery <|.. Query
+Query -> IRepository
+Query -> DTO
+ViewModel -> DTO
+IRepository <|.. Repository
+Repository -> Persistence
+Persistence <|.. PersAda
+@enduml
+

@@ -1,0 +1,38 @@
+@startuml
+
+package "Core Ports (driving)" <<Rectangle>> {
+    interface IAlarmService {
+        {method} CheckUser(User user)
+    }
+            class User {
+            String DeviceToken
+            String MailDomain
+            String MailUsername
+            String MailPassword
+        }
+
+}
+
+package "Core" <<Rectangle>> {
+    class AlarmService {
+        {method} CheckUser(User user)
+    }
+}
+
+package "Core Ports (driven)" <<Rectangle>> {
+    interface ICloudMessaging {
+            {method} SendDataMessage(Dictionary<string,string> data, string token)
+    }
+
+    interface IMailServer {
+        {method} DateTime DateOfNewestUnreadMail()
+
+    }
+}
+
+AlarmService -> ICloudMessaging
+AlarmService -> IMailServer
+IAlarmService -> User
+AlarmService ..|> IAlarmService
+@enduml
+

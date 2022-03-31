@@ -1,0 +1,37 @@
+@startuml
+
+interface FlyBehavior {
+	{method} fly()
+}
+
+class FlyWithWings {
+	{method} fly()
+}
+
+class FlyNoWay {
+	{method} fly()
+}
+
+interface QuackBehavior {
+	{method} quack()
+}
+
+class Quack {
+	{method} quack()
+}
+
+class Squeak {
+	{method} quack()
+}
+
+class MuteQuack {
+	{method} quack()
+}
+
+FlyBehavior <|.. FlyWithWings
+FlyBehavior <|.. FlyNoWay
+QuackBehavior <|.. Quack
+QuackBehavior <|.. Squeak
+QuackBehavior <|.. MuteQuack
+@enduml
+

@@ -1,0 +1,22 @@
+@startuml
+
+participant "View / Fragment /\n  Page / Widget" as View
+participant Request
+
+autonumber
+create Request
+View -> Request : new
+View -> Interactor : execute
+Request --> Interactor
+Interactor -> Gateway : fetch
+participant "Result\n(Model | Error)" as Model
+create Model
+Gateway -> Model : new
+Model --> Interactor
+Interactor -> View : display(Error)[if failure]
+Interactor -> Presenter : present[if success]
+create ViewModel
+Presenter -> ViewModel : new 
+ViewModel --> Interactor
+Interactor -> View : display(success)
+@enduml

@@ -1,0 +1,8 @@
+@startuml
+
+start
+:Der Nutzer gibt an, ob die Frage korrekt ist;
+:Es wird angezeigt, ob der Nutzer richtig lag;
+stop
+@enduml
+

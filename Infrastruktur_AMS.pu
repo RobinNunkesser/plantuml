@@ -1,0 +1,31 @@
+@startuml
+
+component [inflectra spiraTest] as SYS01
+package "Konzeptions-/Umsetzungsunterstützung" { 
+component [Atlassian Confluence] as SYS02
+component [Atlassian JIRA] as SYS03
+component [Atlassian Bitbucket] as SYS04
+}
+component [SonarQube] as SYS05
+component [JetBrains TeamCity] as SYS06
+component [Sonatype Nexus] as SYS07
+component [Microsoft App Center] as SYS08
+package "App Stores" { 
+component [Apple App Store] as SYS09
+component [Google Play Store] as SYS10
+}
+component [install.adesso-mobile.de] as SYS11
+
+SYS01 -- SYS02
+SYS02 -- SYS03
+SYS02 -- SYS05
+SYS03 -- SYS04
+SYS04 -- SYS05
+SYS04 -- SYS06
+SYS05 -- SYS06
+SYS06 -- SYS07
+SYS06 -- SYS08
+SYS06 -- SYS09
+SYS06 -- SYS10
+SYS06 -- SYS11
+@enduml

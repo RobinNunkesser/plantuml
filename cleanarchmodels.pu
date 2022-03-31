@@ -1,0 +1,29 @@
+@startuml
+
+class SongEntity {
+	String leadArtist
+	String albumTitle
+	String title
+	int trackNumber
+	int partOfASet
+}
+
+class SongDomainModel {
+	String artistName
+  	String collectionName
+   	String trackName
+	int trackNumber
+	int discNumber
+	String artworkUrl100
+	Double trackPrice
+}
+
+class SongViewModel {
+	String title
+	String subtitle
+	String artworkUrl	
+}
+
+
+@enduml
+

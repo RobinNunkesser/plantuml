@@ -1,0 +1,54 @@
+@startuml
+
+package Ports {
+/'	class Choices << enumeration >> {
+		Boolean
+		Multiple
+	}
+
+	class Difficulty << enumeration >> {
+		Easy
+		Medium
+		Hard
+	}'/
+
+	interface Question {
+'		string category
+		string text
+	}
+
+	interface YesNoQuestion {
+		bool answer
+	}
+
+}
+
+together {
+class "Quiz UI" as QuizView {
+	QuizViewModel viewModel
+}
+class "Statistics UI" as StatisticsView {
+	QuizViewModel viewModel
+}
+class QuizViewModel {
+	YesNoQuestion[] questions
+	int answeredQuestions
+	int correctAnswers
+	int falseAnswers
+	int skippedQuestions
+}
+
+class "YesNoQuestion" as ConcreteYesNoQuestion {
+	string text
+	bool answer
+}
+
+QuizView o-- QuizViewModel
+QuizViewModel -- ConcreteYesNoQuestion
+QuizView -- StatisticsView
+StatisticsView o-- QuizViewModel
+Question <|-- YesNoQuestion
+YesNoQuestion <|-- ConcreteYesNoQuestion
+
+@enduml
+

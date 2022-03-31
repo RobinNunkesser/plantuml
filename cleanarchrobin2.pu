@@ -1,0 +1,48 @@
+@startuml
+
+together {
+class Result<T> {
+	{field} T success
+	{field} Error failure
+}
+
+package "Entities" <<Rectangle>> {
+class UCEntity
+}
+
+}
+package "Use Cases" <<Rectangle>> {
+interface UseCase {
+	{method} execute(Request)
+}
+
+class UCInteractor {
+	{field} Presenter presenter
+	{method} execute(UCRequest)
+}
+}
+
+
+package "Datasources" <<Rectangle>> {
+interface UCGateway {
+	{method} async fetch() : UCEntity[]
+}
+class ConcreteUCGateway {
+	{method} async fetch() : UCEntity[]
+}
+
+class UCAPI 
+
+}
+
+UCGateway .. UCInteractor : 2
+UCEntity .. ConcreteUCGateway : 3
+ConcreteUCGateway .. Result : 4
+Result .. UCInteractor : 4
+UCInteractor ..|> UseCase
+ConcreteUCGateway ..|> UCGateway
+ConcreteUCGateway -- UCAPI
+
+
+@enduml
+

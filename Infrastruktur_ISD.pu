@@ -1,0 +1,18 @@
+@startuml
+left to right direction
+
+package "Konzeptions-/Umsetzungsunterstützung" { 
+package "GitHub" as PAC01 { 
+component [Wiki] as SYS02
+component [Issues] as SYS03
+component [Code] as SYS04
+}
+component [PlantUML] as SYS05
+component [Figma] as SYS08
+}
+component [GitHub Classroom] as SYS01
+component [Slack] as SYS07
+
+SYS01 -- PAC01
+SYS07 -- SYS04
+@enduml

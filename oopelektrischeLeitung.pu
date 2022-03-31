@@ -1,0 +1,11 @@
+@startuml
+
+object elektrischeLeitung {
+  strom
+  widerstand
+  spannung
+  leistung
+}
+
+@enduml
+

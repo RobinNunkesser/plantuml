@@ -1,0 +1,6 @@
+@startuml
+
+start
+:Nutzer bekommt den Mensaplan des heutigen Tages angezeigt;
+stop
+@enduml

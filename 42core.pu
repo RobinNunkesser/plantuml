@@ -1,0 +1,26 @@
+@startuml
+
+package "Core Ports (driving)" <<Rectangle>> {
+    interface GetAnswerCommand {
+            {method} String Execute(String inDTO)
+    }
+
+}
+
+package "Core" <<Rectangle>> {
+    class "GetAnswerCommand" as CommandHandler {
+        SuperComputer superComputer
+        {method} String Execute(String inDTO)
+    }
+}
+
+package "Core Ports (driven)" <<Rectangle>> {
+        interface SuperComputer {
+            String answer(String question) 
+        }
+}
+
+CommandHandler ..|> GetAnswerCommand
+CommandHandler -> SuperComputer
+@enduml
+

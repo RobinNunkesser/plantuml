@@ -1,0 +1,13 @@
+@startuml
+
+state "<<modal>>\nNew Time Zone" as NewTimeZone
+
+state Tabs {
+state "Stop Watch" as StopWatch
+state "World Clock" as WorldClock
+state Timer
+state Alarm
+}
+[*] --> WorldClock
+WorldClock --> NewTimeZone : tap[Add Button]
+@enduml

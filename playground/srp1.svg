@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" contentScriptType="application/ecmascript" contentStyleType="text/css" height="298px" preserveAspectRatio="none" style="width:435px;height:298px;background:#000000;" version="1.1" viewBox="0 0 435 298" width="435px" zoomAndPan="magnify"><defs><filter height="300%" id="f1tw7it6fuoyx0" width="300%" x="-1" y="-1"><feGaussianBlur result="blurOut" stdDeviation="2.0"/><feColorMatrix in="blurOut" result="blurOut2" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 .4 0"/><feOffset dx="4.0" dy="4.0" in="blurOut2" result="blurOut3"/><feBlend in="SourceGraphic" in2="blurOut3" mode="normal"/></filter></defs><g><polygon fill="#000000" filter="url(#f1tw7it6fuoyx0)" points="104.5,242,131.5,242,138.5,260,145.5,260,145.5,286,104.5,286,104.5,242" style="stroke: #FFFFFF; stroke-width: 1.5;"/><line style="stroke: #FFFFFF; stroke-width: 1.5;" x1="104.5" x2="138.5" y1="260" y2="260"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="21" x="108.5" y="253.2402">GUI</text><polygon fill="#000000" filter="url(#f1tw7it6fuoyx0)" points="183,8,399,8,406,26,413,26,413,52,183,52,183,8" style="stroke: #FFFFFF; stroke-width: 1.5;"/><line style="stroke: #FFFFFF; stroke-width: 1.5;" x1="183" x2="406" y1="26" y2="26"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="210" x="187" y="19.2402">Computational Geometry Application</text><polygon fill="#000000" filter="url(#f1tw7it6fuoyx0)" points="6,8,134,8,141,26,148,26,148,52,6,52,6,8" style="stroke: #FFFFFF; stroke-width: 1.5;"/><line style="stroke: #FFFFFF; stroke-width: 1.5;" x1="6" x2="141" y1="26" y2="26"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" font-weight="bold" lengthAdjust="spacingAndGlyphs" textLength="122" x="10" y="19.2402">Graphical Application</text><!--MD5=[b5313cd49da22b0744b541f414f8445e]
+class Rectangle--><rect fill="#070707" filter="url(#f1tw7it6fuoyx0)" height="70" id="Rectangle" style="stroke: #C7C7C7; stroke-width: 1.5;" width="86" x="130" y="112"/><ellipse cx="144" cy="127" fill="#3D3D3D" rx="10" ry="10" style="stroke: #C7C7C7; stroke-width: 1.0;"/><path d="M145.834,131.248 Q145.4238,131.459 144.9727,131.5645 Q144.5215,131.6699 144.0234,131.6699 Q142.2539,131.6699 141.3223,130.5039 Q140.3906,129.3379 140.3906,127.1348 Q140.3906,124.9258 141.3223,123.7598 Q142.2539,122.5938 144.0234,122.5938 Q144.5215,122.5938 144.9785,122.6992 Q145.4355,122.8047 145.834,123.0156 L145.834,124.9375 Q145.3887,124.5273 144.9697,124.3369 Q144.5508,124.1465 144.1055,124.1465 Q143.1563,124.1465 142.6729,124.8994 Q142.1895,125.6523 142.1895,127.1348 Q142.1895,128.6113 142.6729,129.3643 Q143.1563,130.1172 144.1055,130.1172 Q144.5508,130.1172 144.9697,129.9268 Q145.3887,129.7363 145.834,129.3262 Z "/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="56" x="157" y="130.2402">Rectangle</text><line style="stroke: #C7C7C7; stroke-width: 1.5;" x1="131" x2="215" y1="142" y2="142"/><line style="stroke: #C7C7C7; stroke-width: 1.5;" x1="131" x2="215" y1="150" y2="150"/><text fill="#FFFFFF" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="35" x="136" y="163.2402">draw()</text><text fill="#FFFFFF" font-family="Helvetica" font-size="12" lengthAdjust="spacingAndGlyphs" textLength="74" x="136" y="175.2402">double area()</text><!--MD5=[77c42b455cad58191777d48ed04fd40f]
+link Rectangle to GUI--><path d="M158.5984,182.1039 C151.391,199.672 142.8008,220.6104 136.1106,236.9178 " fill="none" id="Rectangle-&gt;GUI" style="stroke: #C7C7C7; stroke-width: 1.0;"/><polygon fill="#C7C7C7" points="134.099,241.8212,141.2158,235.013,135.9968,237.1954,133.8145,231.9765,134.099,241.8212" style="stroke: #C7C7C7; stroke-width: 1.0;"/><!--MD5=[3b60f25f28168e940269a117cd143b10]
+link CGA to Rectangle--><path d="M274.4885,52.0068 C257.6479,67.7696 234.5194,89.4179 214.5945,108.0675 " fill="none" id="CGA-&gt;Rectangle" style="stroke: #C7C7C7; stroke-width: 1.0;"/><polygon fill="#C7C7C7" points="210.6551,111.7548,219.9593,108.5248,214.3055,108.338,214.4923,102.6842,210.6551,111.7548" style="stroke: #C7C7C7; stroke-width: 1.0;"/><!--MD5=[b61e51c493c92be229a144715403c1d3]
+link GA to Rectangle--><path d="M95.0569,52.0068 C107.8826,67.6382 125.4574,89.0575 140.6723,107.6007 " fill="none" id="GA-&gt;Rectangle" style="stroke: #C7C7C7; stroke-width: 1.0;"/><polygon fill="#C7C7C7" points="144.0809,111.7548,141.4644,102.2598,140.9094,107.8894,135.2798,107.3343,144.0809,111.7548" style="stroke: #C7C7C7; stroke-width: 1.0;"/><!--MD5=[116b2760e714746ce87559f4cc3e6707]
+link GA to GUI--><path d="M81.5157,52.0142 C90.3425,95.0447 109.8574,190.1798 119.4529,236.9579 " fill="none" id="GA-&gt;GUI" style="stroke: #C7C7C7; stroke-width: 1.0;"/><polygon fill="#C7C7C7" points="120.4613,241.8739,122.5712,232.2537,119.4566,236.9759,114.7344,233.8612,120.4613,241.8739" style="stroke: #C7C7C7; stroke-width: 1.0;"/><!--MD5=[c00e750664517dc457ce94b9c1437a89]
+@startuml
+skinparam monochrome reverse
+skinparam componentStyle uml2
+skinparam defaultFont {
+    Size 12
+    Name Helvetica
+}
+skinparam backgroundColor white
+
+class Rectangle {
+	draw()
+	double area()	
+}
+
+package GUI { }
+package "Computational Geometry Application" as CGA { }
+package "Graphical Application" as GA { }
+
+Rectangle - -> GUI
+CGA - -> Rectangle
+GA - -> Rectangle
+GA - -> GUI
+
+@enduml
+
+PlantUML version 1.2020.06(Sun Apr 05 14:38:32 CEST 2020)
+(GPL source distribution)
+Java Runtime: Java(TM) SE Runtime Environment
+JVM: Java HotSpot(TM) 64-Bit Server VM
+Java Version: 1.8.0_131-b11
+Operating System: Mac OS X
+Default Encoding: UTF-8
+Language: de
+Country: DE
+--></g></svg>

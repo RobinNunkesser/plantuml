@@ -1,0 +1,20 @@
+@startuml
+
+interface "Data Channel" as DC {
+	send(c: char)
+	char recv()
+}
+
+interface Connection{
+	dial(pno: String)
+	hangup()
+}
+
+class Modem {	
+}
+
+Connection <|.. Modem
+DC <|.. Modem
+
+@enduml
+

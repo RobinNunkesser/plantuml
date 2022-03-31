@@ -1,0 +1,10 @@
+@startsalt
+{+
+  List boxes
+  <back:orange>funktionieren wir Dropdown</back>
+  Allerdings ist
+  <back:orange>Mehrfachauswahl möglich</back>
+  <back:orange>genau wie bei</back>
+  Checkboxen
+}
+@endsalt

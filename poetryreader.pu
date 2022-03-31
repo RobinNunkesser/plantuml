@@ -1,0 +1,54 @@
+@startuml
+
+package "Start / Dependency Configuration" <<Rectangle>> {
+    class Program {
+        Main()
+    }
+}
+
+package "Application" <<Rectangle>> {
+    class PoetryReader {
+        IObtainPoems poetryLibrary
+    }
+
+package "Ports (driving)" {
+    interface IRequestVerses {
+        string GiveMeSomePoetry()
+    }
+}
+
+package "Ports (driven)" {
+    interface IObtainPoems {
+        string GetAPoem()
+    }
+}
+
+}
+
+package "Infrastructure" {
+
+package "Repository" {
+    class PoemFileAdapter {
+
+    }
+}
+
+package "Drivers" {
+    class ConsoleAdapter {
+        IRequestVerses poetryReader
+    }
+
+ }
+}
+
+
+PoetryReader ..|> IRequestVerses
+PoemFileAdapter ..|> IObtainPoems
+PoetryReader -> IObtainPoems
+' ConsoleAdapter -> IWriteStuffOnTheConsole
+ConsoleAdapter -> IRequestVerses
+Program ..> ConsoleAdapter
+Program ..> PoetryReader
+Program ..> PoemFileAdapter
+@enduml
+

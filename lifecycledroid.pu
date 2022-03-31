@@ -1,0 +1,22 @@
+@startuml
+
+partition Launching {
+(*) --> "onCreate()"
+--> "onStart()"
+--> "onResume()"
+}
+partition Running {
+"onResume()" --> "Custom Events"
+}
+partition Leaving {
+"Custom Events" -->[Another activty comes\n into the foreground] "onPause()"
+"onPause()" -->[User returns to the activity] "onResume()"
+"onPause()" -->[The activity is no longer visible] "onStop()"
+"onStop()" -->[The activity is finishing or\n being destroyed by the system] "onDestroy()"
+"onDestroy()" --> (*)
+"onPause()" -->[Apps with higher priority\n need memory] (*)
+}
+"onStop()" -->[User navigates to the activity] "onRestart()"
+"onRestart()" --> "onStart()"
+
+@enduml

@@ -1,0 +1,18 @@
+@startuml
+
+start
+if () then
+#CCCCCC:Mensa ist geschlossen und 
+Nutzer wird informiert;
+else
+#EEEEEE:Nutzer bekommt den Mensaplan 
+des heutigen Tages angezeigt;
+if () then
+stop
+else
+#EEEEEE:Nutzer wählt Filter für Allergene/Zusatzstoffe;
+#EEEEEE:Nutzer bekommt gefilterten Plan angezeigt;
+endif
+endif
+stop
+@enduml

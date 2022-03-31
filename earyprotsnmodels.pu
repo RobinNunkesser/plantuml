@@ -1,0 +1,66 @@
+@startuml
+
+
+package "Eary App" <<Rectangle>> {
+
+    interface EaryAlbum {
+        String id
+        BookStatus status
+        String albumTitle
+        String artist
+        Int trackCount
+        String previewImageUrl
+        String description
+        Int duration
+    }
+
+    enum BookStatus {
+        notStartedYet
+        finished
+        inProgress
+    }
+
+}
+
+package "AudioStreamingServicePorts" <<Rectangle>> {
+
+    interface AudiobookProto {
+        String id
+        AudiobookTrackProto currentTrack
+        AudioBookState status
+        String albumTitle
+        String artist
+        Int trackCount
+    }
+
+    enum AudioBookState {
+        new
+        ongoing
+        completed
+    }
+
+    interface StreamingAudiobookProto {
+        ArtworkProto artwork
+    }
+
+    interface ArtworkProto {
+        Int width
+        Int height
+        String templateUrl
+        {method} func imageURL(height: Int, width: Int) -> URL?
+    }
+
+    interface AudiobookTrackProto {
+        Int trackNumber
+        Double playedTime
+    }
+}
+
+
+EaryAlbum -> BookStatus
+AudiobookProto -> AudioBookState
+StreamingAudiobookProto ..|> AudiobookProto
+StreamingAudiobookProto -> ArtworkProto
+AudiobookProto -> AudiobookTrackProto
+@enduml
+

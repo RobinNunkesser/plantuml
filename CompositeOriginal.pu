@@ -1,0 +1,29 @@
+@startuml
+
+abstract class Component {
+	{method} operation()
+	{method} add(Component)
+	{method} remove(Component)
+	{method} getChild(int)
+}
+
+class Composite {
+	{method} operation()
+	{method} add(Component)
+	{method} remove(Component)
+	{method} getChild(int)
+}
+
+class Leaf {
+	{method} operation()
+}
+
+note "forall g in children\ng.operation();" as N1
+
+Composite .. N1
+Component <|-- Leaf
+Component <|-- Composite
+Client -- Component
+
+@enduml
+

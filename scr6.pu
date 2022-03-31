@@ -1,0 +1,52 @@
+@startsalt
+title <&chevron-left> Statistik
+header SCR06
+footer Low-fi prototype (wireframe)
+{+
+{
+    .    
+    Bearbeitete Fragen | 10
+    ----
+    Richtig beantwortet | 7
+    ----
+    Falsch beantwortet | 1
+    ----
+    Übersprungen | 2
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+}
+{/ Stundenplan | Mensa | <b> Quiz | Profs | Einstellungen }
+}
+
+@endsalt
+

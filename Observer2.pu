@@ -1,0 +1,32 @@
+@startuml
+
+class WeatherData {
+	{method} getTemperature()
+	{method} getHumidity()
+	{method} getPressure()
+	{method} measurementsChanged()
+}
+
+interface Display {
+	{method} update()
+}
+
+class CurrentConditionsDisplay {
+	{method} update()
+}
+
+class ForecastDisplay {
+	{method} update()
+}
+
+class StatisticsDisplay {
+	{method} update()
+}
+
+Display <|.. CurrentConditionsDisplay
+Display <|.. ForecastDisplay
+Display <|.. StatisticsDisplay
+WeatherData -- Display
+
+@enduml
+

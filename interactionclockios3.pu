@@ -1,0 +1,26 @@
+@startuml
+
+state "<<modal>>\nNew Time Zone" as NewTimeZone
+state "New Alarm" as NewAlarm
+state "<<modal>>\nAlarm Repetition" as Repetition
+state "<<modal>>\nAlarm Label" as AlarmLabel
+state "Choose Sound" as ChooseSound
+state "<<external>>\niTunes Store" as Store
+state "<<modal>>\nSong Picker" as SongPicker
+
+state Tabs {
+state "Stop Watch" as StopWatch
+state "World Clock" as WorldClock
+state Timer
+state Alarm
+}
+[*] --> WorldClock
+WorldClock --> NewTimeZone : tap[Add Button]
+Alarm --> NewAlarm : tap[Add Button]
+NewAlarm --> Repetition : tap[Repeat]
+NewAlarm --> AlarmLabel : tap[Label]
+NewAlarm --> ChooseSound : tap[Sound]
+ChooseSound --> Store : tap[Buy More Tones]
+ChooseSound --> SongPicker : tap[Pick a Song]
+Timer --> ChooseSound : tap[When Timer Ends]
+@enduml

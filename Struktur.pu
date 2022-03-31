@@ -1,0 +1,85 @@
+@startuml
+
+class Gericht {
+	{field} name
+	{field} preis
+	{field} vegetarisch
+	{field} vegan
+	{field} laktosefrei
+	{field} halal
+	{field} kategorie
+	{field} allergene
+	{field} zusatzstoffe
+	{field} bild
+	{field} kalorienarm
+	{field} fettarm
+}
+
+class Nutzer {
+	{field} statusgruppe
+	{field} studiengaenge
+	{field} allergene
+	{field} zusatzstoffe
+}
+
+class Quiz {
+	{field} questions
+	{field} statistics
+}
+
+class Question {
+	{field} text
+	{field} answer
+}
+
+class Statistics {
+	{field} answeredQuestions
+	{field} correctAnswers
+}
+
+class Professor {
+	{field} email
+	{field} vorname
+	{field} nachname
+	{field} telefonnummer	
+}
+
+class Statusgruppe << enumeration >> {
+	Studierende
+	Bedienstete
+	Gaeste
+}
+
+class Kategorie << enumeration >> {
+	Essen
+	Beilage
+}
+
+class Allergen << primitive >>
+class Zusatzstoff << primitive >>
+
+
+class Studiengang {
+	{field} name
+}
+
+class Veranstaltung {
+	{field} raum
+	{field} zeit
+	{field} name
+	{field} studiengang	
+}
+
+Gericht "0..*" -- "1" Kategorie
+Gericht "0..*" -- "0..*" Allergen
+Gericht "0..*" -- "0..*" Zusatzstoff
+Studiengang "1" -- "1..*" Veranstaltung
+Nutzer "0..*" -- "1" Statusgruppe
+Nutzer "0..*" -- "0..*" Allergen
+Nutzer "0..*" -- "0..*" Zusatzstoff
+Nutzer "0..*" -- "0..*" Studiengang
+Quiz "0..*" -- "0..*" Question
+Quiz "0..*" -- "1" Statistics
+
+@enduml
+

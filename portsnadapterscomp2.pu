@@ -1,0 +1,62 @@
+@startuml
+
+together {
+package "Drivers" {
+component Driving1 [
+test 
+adapter
+] 
+component Driving2 [
+GUI
+adapter
+] 
+component Driving4 [
+app-to-app 
+adapter
+] 
+}
+/'component Driving3 [
+http
+adapter
+] '/
+() "user-side API" as Driving
+
+component App [
+Application (⬡)
+]
+}
+
+() "data-side API 1" as Driven
+() "data-side API 2" as DrivenAPI
+
+together {
+package "Repositories" {
+component Driven1 [
+DB access
+service
+] 
+
+component Driven2 [
+mock in-memory
+database
+] 
+}
+
+package "Recipients" {
+    component Driven3 [
+        email adapter
+    ]
+}
+}
+Driving - App
+Driven - App
+DrivenAPI - App
+Driving1 ..> Driving 
+Driving2 ..> Driving 
+'Driving3 ..> Driving 
+Driving4 ..> Driving 
+Driven1 ..> Driven
+Driven2 ..> Driven
+Driven3 ..> DrivenAPI
+@enduml
+

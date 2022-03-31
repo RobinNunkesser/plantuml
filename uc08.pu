@@ -1,0 +1,7 @@
+@startuml
+
+start
+:Nutzer sieht Einstellungen;
+:Nutzer ändert eine Einstellung;
+stop
+@enduml

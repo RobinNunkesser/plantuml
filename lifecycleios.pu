@@ -1,0 +1,19 @@
+@startuml
+
+partition Launching {
+(*) --> "viewDidLoad()"
+--> "viewWillAppear()"
+--> "viewDidAppear()"
+}
+partition Running {
+"viewDidAppear()" --> "Custom Events"
+}
+partition Leaving {
+"Custom Events" -->[Another page comes\n into the foreground] "viewWillDisappear()"
+--> "viewDidDisappear()"
+"viewDidDisappear()" -->[User returns to the page] "viewWillAppear()"
+"viewDidDisappear()" -->[The page is finishing or\n being destroyed by the system] "deinit()"
+"deinit()" --> (*)
+}
+
+@enduml

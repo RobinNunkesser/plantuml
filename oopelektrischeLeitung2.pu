@@ -1,0 +1,16 @@
+@startuml
+
+object elektrischeLeitung {
+  strom
+  widerstand = 10 Ohm
+  spannung = 230 V
+  leistung
+}
+
+note right of elektrischeLeitung
+  strom = spannung / widerstand
+  leistung = strom * spannung
+end note
+
+@enduml
+

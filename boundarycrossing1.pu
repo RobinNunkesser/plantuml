@@ -1,0 +1,14 @@
+@startuml
+
+package "Outer circle" <<Rectangle>> {
+    class OuterClass
+}
+
+package "Inner circle" <<Rectangle>> {
+    class InnerClass
+
+}
+
+OuterClass -> InnerClass
+@enduml
+

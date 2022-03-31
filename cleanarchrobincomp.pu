@@ -1,0 +1,14 @@
+@startuml
+
+[Display] as UI
+[Use Cases] as UC
+[Datasources] as Database
+[Entities]
+
+UI --> UC
+Database --> UC
+UC --> Entities
+Database --> Entities
+
+@enduml
+

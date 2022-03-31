@@ -1,0 +1,20 @@
+@startuml
+
+package "Outer circle" <<Rectangle>> {
+    class OuterClass
+}
+
+package "Inner circle" <<Rectangle>> {
+    class InnerClass    
+
+}
+
+package "Inner circle (Ports)" <<Rectangle>> {
+    interface InnerInterface
+}
+
+OuterClass -> InnerClass
+InnerClass -> InnerInterface
+OuterClass ..|> InnerInterface
+@enduml
+

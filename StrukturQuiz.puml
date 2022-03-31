@@ -1,0 +1,14 @@
+@startuml
+
+class Question {
+	{field} text
+	{field} answer
+}
+
+class Statistics {
+	{field} answeredQuestions
+	{field} correctAnswers
+}
+
+@enduml
+

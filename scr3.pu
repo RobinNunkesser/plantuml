@@ -1,0 +1,49 @@
+@startsalt
+title Quiz <&info>
+header SCR03
+footer Low-fi prototype (wireframe)
+{+
+{
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    === Fragetext
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    [Falsch] | [ Wahr ]
+    [Überspringen] | *
+}
+{/ Stundenplan | Mensa | <b> Quiz | Profs | Einstellungen }
+}
+
+@endsalt
+

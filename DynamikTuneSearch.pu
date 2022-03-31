@@ -1,0 +1,12 @@
+@startuml
+left to right direction
+
+actor :AC01 Nutzer: as AC01
+
+(UC01 Suche ausführen) as (UC01)
+(UC02 Suchergebnisse anschauen) as (UC02)
+
+AC01 --> (UC01)
+AC01 --> (UC02)
+
+@enduml

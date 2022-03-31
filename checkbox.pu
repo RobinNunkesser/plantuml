@@ -1,0 +1,9 @@
+@startsalt
+{
+    [] Checkboxen sind unabhängig
+    [X] Man kann sie gruppieren
+.
+    [] Oder alleine nutzen
+}
+@endsalt
+

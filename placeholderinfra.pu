@@ -1,0 +1,50 @@
+@startuml
+
+package "Core Ports" <<Rectangle>> {
+
+interface Post {
+            int userId
+            int id
+            string title
+            string body
+        }
+
+package "driven" <<Rectangle>> {
+        interface PostCrudRepository {
+            int create(Post post)
+            Post retrieve(int id)
+            Post[] retrieveAll()
+            bool update(int id, Post post)
+            bool delete(int id)
+        }
+
+        
+
+}
+}
+
+package "Infrastructure Adapters" <<Rectangle>> {
+        class PostRepositoryAdapter {
+            private JSONPlaceholderAPI api
+        }
+
+        class PostAdapter {
+
+        }
+}
+
+package "Infrastructure" <<Rectangle>> {
+    class JSONPlaceholderAPI 
+
+    class JSONPost
+}
+
+PostRepositoryAdapter ..|> PostCrudRepository
+PostRepositoryAdapter -- PostAdapter
+PostAdapter ..|> Post
+PostRepositoryAdapter -> JSONPlaceholderAPI
+PostCrudRepository -- Post
+JSONPlaceholderAPI -- JSONPost
+PostAdapter -> JSONPost
+@enduml
+

@@ -1,0 +1,12 @@
+@startuml
+
+class WeatherData {
+	{method} getTemperature()
+	{method} getHumidity()
+	{method} getPressure()
+	{method} measurementsChanged()
+}
+
+
+@enduml
+

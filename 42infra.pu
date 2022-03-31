@@ -1,0 +1,23 @@
+@startuml
+
+package "Core Ports (driven)" <<Rectangle>> {
+        interface SuperComputer {
+            String answer(String question) 
+        }
+}
+
+package "Infrastructure Adapters" <<Rectangle>> {
+        class SuperComputerAdapter {
+            private DeepThought deepThought
+            String answer(String question) 
+        }
+}
+
+package "Infrastructure" <<Rectangle>> {
+    class DeepThought 
+}
+
+SuperComputerAdapter ..|> SuperComputer
+SuperComputerAdapter -> DeepThought
+@enduml
+

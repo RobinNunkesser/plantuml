@@ -1,0 +1,79 @@
+@startuml
+
+package "Display" <<Rectangle>> {
+interface Displayer {
+	{method} display(Response)
+}
+
+class "UC\nViewController / Fragment / Page / Widget" as UCView {
+	{field} UseCase interactor
+	{method} display(Response)
+}
+
+class UCViewModel
+
+interface Presenter<Entity,ViewModel> {
+	{method} present(Entity) : ViewModel
+}
+
+class UCPresenter {
+	{method} present(UCEntity) : UCViewModel
+}
+}
+
+class UCRequest
+
+class Response<T> {
+	{field} T success
+	{field} Error failure
+}
+
+package "Entities" <<Rectangle>> {
+class UCEntity
+}
+
+package "Use Cases" <<Rectangle>> {
+interface UseCase {
+	{method} execute(UCRequest)
+}
+
+class UCInteractor {
+	{field} Presenter presenter
+	{method} execute(UCRequest)
+}
+}
+
+
+package "Datasources" <<Rectangle>> {
+interface UCGateway {
+	{method} async fetch() : UCEntity[]
+}
+class ConcreteUCGateway {
+	{method} async fetch() : UCEntity[]
+}
+
+class UCAPI 
+
+}
+
+UCView .. UCRequest : 1
+UCRequest .. UseCase : 1
+UCGateway .. UCInteractor : 2
+UCEntity .. ConcreteUCGateway : 3
+ConcreteUCGateway .. Response : 4
+Response .. UCInteractor : 4
+UCEntity .. Presenter : 5
+Presenter .. UCViewModel : 6
+UCViewModel .. UCInteractor : 7
+UCView ..|> Displayer
+UCInteractor ..|> UseCase
+UCInteractor .. Response
+Response .. UCView
+UCPresenter ..|> Presenter
+UCView o-- UCViewModel
+ConcreteUCGateway ..|> UCGateway
+ConcreteUCGateway -- UCAPI
+
+
+@enduml
+

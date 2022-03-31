@@ -1,0 +1,54 @@
+@startuml
+
+class UCRequest
+
+package "Display" <<Rectangle>> {
+interface Displayer {
+	{method} display(Result)
+	{method} display(Error)
+}
+
+class "UC\nView / Fragment / Page / Widget" as UCView {
+	{field} UseCase interactor
+	{method} display(UCResult)
+	{method} display(Error)
+}
+
+class UCViewModel
+
+interface Presenter<Model,ViewModel> {
+	{method} present(Model) : ViewModel
+}
+
+class UCPresenter {
+	{method} present(UCModel) : UCViewModel
+}
+}
+
+
+package "Use Cases" <<Rectangle>> {
+interface UseCase {
+	{method} execute(Request)
+}
+
+class UCInteractor {
+	{field} Presenter presenter
+	{field} Displayer displayer
+	{method} execute(UCRequest)
+}
+}
+
+
+UCView .. UCRequest : 1
+UCRequest .. UseCase : 1
+UCView ..|> Displayer
+UCInteractor ..|> UseCase
+UCPresenter ..|> Presenter
+UCView o-- UCViewModel
+/'UCInteractor -- Presenter
+UCInteractor -- Displayer
+UCView -- UseCase'/
+
+
+@enduml
+

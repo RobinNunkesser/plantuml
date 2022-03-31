@@ -1,0 +1,20 @@
+@startuml
+
+actor :AC01 Nutzer: as AC01
+
+package "Mobile Apps" {
+  component [SYS01 iOS App] as SYS01
+  component [SYS02 Android App] as SYS02
+}
+
+package "External Backend" {
+  component [SYS03 iTunes Search] as SYS03
+}
+
+
+AC01 - SYS01
+AC01 - SYS02
+SYS01 ..> SYS03 : REST/JSON
+SYS02 ..> SYS03 : REST/JSON
+
+@enduml

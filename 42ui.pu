@@ -1,0 +1,16 @@
+@startuml
+
+package "User Interface" <<Rectangle>> {
+    class View
+}
+
+package "Core Ports (driving)" <<Rectangle>> {
+    interface GetAnswerCommand {
+            {method} String Execute(String inDTO)
+    }
+
+}
+
+View -> GetAnswerCommand
+@enduml
+

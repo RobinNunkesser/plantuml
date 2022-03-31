@@ -1,0 +1,9 @@
+@startuml
+
+start
+:Nutzer wählt Veranstaltung;
+:Nutzer wählt Ziel für den Export;
+:Veranstaltung wird exportiert;
+stop
+@enduml
+

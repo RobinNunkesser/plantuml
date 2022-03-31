@@ -1,0 +1,22 @@
+@startuml
+
+start
+repeat
+    :Inception;
+repeat while (Iterate?)
+-> M1: Objectives;
+repeat
+    :Elaboration;
+repeat while (Iterate?)
+-> M2: Architecture;
+repeat
+    :Construction;
+repeat while (Iterate?)
+-> M3: Operational Capability;
+repeat
+    :Transition;
+repeat while (Iterate?)
+-> M4: Product Release;
+stop
+@enduml
+

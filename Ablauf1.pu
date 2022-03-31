@@ -1,0 +1,17 @@
+@startuml
+
+participant "SYS01/SYS02\n(Mobile App)" as SYS01
+participant "EXT01\n(Mensa Server)" as EXT01
+
+SYS01->EXT01: Status zu aktuellem Datum abrufen
+activate EXT01
+return Öffnungsstatus
+
+alt Mensa geöffnet
+    SYS01->EXT01: Mensaplan abrufen
+    activate EXT01
+    return Aktueller Mensaplan
+else Mensa geschlossen
+    SYS01->SYS01: Meldung über geschlossene Mensa
+end
+@enduml

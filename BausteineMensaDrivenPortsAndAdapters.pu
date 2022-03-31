@@ -1,0 +1,104 @@
+@startuml
+
+package Adapters {
+        class MealRepository {
+        Meal Retrieve(int id)
+        Meal[] RetrieveAll()        
+        }
+
+/'        class "Meal" as ConcreteMeal {
+	{field} Date date
+	{field} String name
+	{field} Price price
+	{field} Allergens allergens
+	{field} Additives additives
+	{field} Category category
+	{field} URL image		
+}'/
+
+}
+
+package Ports {
+	interface DataSource<TId, TEntity> {
+		TEntity Retrieve(TId id)
+		TEntity[] RetrieveAll()
+	}
+
+	
+
+	class Additives << enumeration >> {
+        None
+        FoodColoring
+        Preservatives
+        Antioxidants
+        FlavorEnhancer
+        Phosphate
+        Sulphureted
+        Waxed
+        Blackend
+        Sweetener
+        Phenylalanine
+        Taurine
+        NitritePicklingSalt
+        Caffeinated
+        Quinine
+        MilkProtein
+	}
+
+	class Allergens << enumeration >> {
+        None
+        Gluten
+        Shellfish
+        Eggs
+        Fish
+        Peanuts
+        Soy
+        Milk
+        Nuts
+        Celery
+        Mustard
+        Sesame
+        Sulfur
+        Lupine
+        Mollusk
+    }
+
+	class Category << enumeration >> {
+		none
+		dish
+		sidedish
+		dessert
+		soup
+	}
+
+	interface Meal {
+		{field} Date date
+		{field} String name
+		{field} Price price
+		{field} Allergens allergens
+		{field} Additives additives
+		{field} Category category
+		{field} URL image		
+	}
+
+	interface Price {
+		double Students
+		double Employees
+		double Others
+	}
+
+}
+
+
+
+Meal -- Category
+Meal -- Allergens
+Meal -- Additives
+Meal -- Price
+DataSource <|-- MealRepository
+' Meal <|-- ConcreteMeal
+' MealRepository -- ConcreteMeal
+MealRepository -- Meal
+
+@enduml
+

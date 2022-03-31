@@ -1,0 +1,14 @@
+@startuml
+
+participant Client
+participant Invoker
+participant Receiver
+create Command
+
+autonumber
+Client->Command: createCommandObject()
+Client->Command: setReceiver()
+Client->Invoker: setCommand()
+Invoker->Command: execute()
+Command->Receiver: action1(),action2()
+@enduml

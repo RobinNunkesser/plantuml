@@ -1,0 +1,56 @@
+@startuml
+
+package "Core Ports (driven)" <<Rectangle>> {        
+
+    interface "IStudentRepository" as InfrastructureInterface
+    {
+        List<String> Retrieve()
+    }
+
+    interface IExamExporter
+    {
+        void Export(IExam exams);
+    }
+
+    interface ITaskTextGenerator 
+    {
+        ITaskText Generate(ITask task);
+    }
+
+    interface ITaskSolver<T>
+    {
+        T Solve(ITask task)
+    }
+
+}
+
+package "Infrastructure Excel \n Adapters" <<Rectangle>> {
+        class "EventoImporter" as InfrastructureAdapter {
+        }
+
+}
+
+package "Infrastructure Solver" <<Rectangle>> {
+    class Solver {
+    }
+}
+
+package "Infrastructure LaTeX Adapters" <<Rectangle>> {
+        class LaTeXExporter {            
+        }
+
+        class TaskTextGenerator {
+
+        }
+
+}
+
+LaTeXExporter ..|> IExamExporter
+
+TaskTextGenerator ..|> ITaskTextGenerator
+ITask -> ITaskSolver
+Solver ..|> ITaskSolver
+ITask -> ITaskTextGenerator
+
+@enduml
+

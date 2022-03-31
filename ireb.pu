@@ -1,0 +1,14 @@
+@startuml
+
+(*) --> "Eingabemaske anzeigen"
+--> "Daten eingeben"
+if "Daten prüfen" then
+  -->[Daten ok] "Daten speichern"
+  --> (*)
+else
+  -->[Daten nicht ok] "Fehler ausgeben"
+  -->"Daten eingeben"
+endif
+
+@enduml
+

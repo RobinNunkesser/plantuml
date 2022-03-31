@@ -1,0 +1,13 @@
+@startuml
+
+actor :AC01 Spieler: as AC01
+
+(UC01 Quizfrage ansehen) as (UC01)
+(UC02 Quizfrage beantworten) as (UC02)
+(UC03 Statistik ansehen) as (UC03)
+
+AC01 --> (UC01)
+AC01 --> (UC02)
+AC01 --> (UC03)
+
+@enduml

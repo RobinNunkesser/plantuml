@@ -1,0 +1,52 @@
+@startuml
+
+together {
+abstract class Subject {
+	Attach(Observer)
+	Detach(Observer)
+	Notify()
+}
+
+abstract class Observer {
+	Update()
+}
+}
+
+class WeatherData {
+	{method} getTemperature()
+	{method} getHumidity()
+	{method} getPressure()
+	{method} measurementsChanged()
+}
+
+interface Display {
+	{method} display()
+}
+
+class CurrentConditionsDisplay {
+	{method} update()
+	{method} display()
+}
+
+class ForecastDisplay {
+	{method} update()
+	{method} display()
+}
+
+class StatisticsDisplay {
+	{method} update()
+	{method} display()
+}
+
+Display <|.. CurrentConditionsDisplay
+Display <|.. ForecastDisplay
+Display <|.. StatisticsDisplay
+Observer <|-- CurrentConditionsDisplay
+Observer <|-- ForecastDisplay
+Observer <|-- StatisticsDisplay
+WeatherData -- Display
+Subject <|-- WeatherData
+Subject -- Observer
+
+@enduml
+

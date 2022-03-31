@@ -1,0 +1,7 @@
+@startuml
+
+start
+:Nutzer sieht Statistiken an;
+stop
+@enduml
+

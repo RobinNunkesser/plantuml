@@ -1,0 +1,18 @@
+@startuml
+
+class Rectangle {
+	draw()
+	double area()	
+}
+
+package GUI { }
+package "Computational Geometry Application" as CGA { }
+package "Graphical Application" as GA { }
+
+Rectangle --> GUI
+CGA --> Rectangle
+GA --> Rectangle
+GA --> GUI
+
+@enduml
+

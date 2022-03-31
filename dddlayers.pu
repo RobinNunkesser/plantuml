@@ -1,0 +1,40 @@
+@startuml
+left to right direction
+skinparam class {
+    FontColor None
+}
+hide members
+
+package "User Interface" <<Rectangle>> {
+    class U1 
+    class U2
+}
+
+package "Application" <<Rectangle>> {
+    class A1 
+    class A2
+}
+
+package "Domain" <<Rectangle>> {
+    class D1 
+    class D2
+}
+
+package "Infrastructure" <<Rectangle>> {
+    class I1 
+    class I2
+    class I3
+    class I4
+}
+
+U1 -> A1
+U2 -> A2
+U2 -> D2
+U2 -|> I4
+A1 -> I1
+A1 -> D1
+A2 -> D2
+D2 -> I2
+D2 -|> I3
+@enduml
+

@@ -1,0 +1,17 @@
+@startuml
+
+left to right direction
+
+state "alarm 1" as alarm1
+state "alarm 2" as alarm2
+
+[*] --> time
+time --> alarm1 : a
+alarm1 --> alarm2 : a
+alarm2 --> chime : a
+chime --> stopwatch : a
+stopwatch --> time : a
+time --> date : d
+date --> time : d
+date --> time : 2 min in date
+@enduml

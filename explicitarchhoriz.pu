@@ -1,0 +1,34 @@
+@startuml
+
+package "Mock Core" <<Rectangle>> {
+    class "MockCommand" as CommandHandler {
+        {method} OutDTO Execute(InDTO inDTO)
+    }
+}
+
+package "Core Ports (driving)" <<Rectangle>> {
+    interface Command {
+        {method} OutDTO Execute(InDTO inDTO)
+    }
+
+    class InDTO {       
+
+     }
+
+    class OutDTO {       
+
+     }
+
+}
+
+package "User Interface" <<Rectangle>> {
+    class View
+}
+
+View -> InDTO
+View -> Command
+CommandHandler ..|> Command
+Command -- InDTO
+Command -- OutDTO
+@enduml
+

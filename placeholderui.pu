@@ -1,0 +1,37 @@
+@startuml
+
+package "User Interface" <<Rectangle>> {
+    class View
+    class "GetPostDTO" as ConcreteDTO {
+    }
+}
+
+package "Core Ports" <<Rectangle>> {
+
+interface Post {
+            int userId
+            int id
+            string title
+            string body
+        }
+
+package "driving" <<Rectangle>> {
+    interface GetPostDTO {
+        int id
+    }
+
+    interface GetPostCommand {
+            {method} Post Execute(GetPostDTO inDTO)
+    }
+
+}
+}
+
+
+View -> ConcreteDTO
+View -> GetPostCommand
+ConcreteDTO ..|> GetPostDTO 
+GetPostCommand -- GetPostDTO
+GetPostCommand -- Post
+@enduml
+
