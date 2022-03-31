@@ -1,0 +1,23 @@
+@startuml
+
+actor :AC01 Akteur 1: as AC01
+actor :AC02 Akteur 2: as AC02
+
+package "Frontend" {
+  component [SYS01 App] as SYS01
+}
+
+package "Backend" {
+  component [SYS02 Server] as SYS02
+}
+
+package "Externes Backend" {
+  component [EXT01 Server] as EXT01
+}
+ 
+AC01 - SYS01
+AC02 - SYS02
+SYS01 ..> SYS02 : REST/JSON
+SYS01 ..> EXT01 : REST/JSON
+
+@enduml
