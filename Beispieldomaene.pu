@@ -1,0 +1,14 @@
+@startuml
+
+class "Entität 1" as Entity1 {
+        {field} Eigenschaft 1
+        {field} Eigenschaft 2
+}
+
+class "Entität 2" as Entity2 {
+        {field} Eigenschaft 1
+}
+
+Entity1 "1" -- "1..*" Entity2
+
+@enduml
