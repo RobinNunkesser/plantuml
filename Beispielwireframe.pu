@@ -1,0 +1,42 @@
+@startsalt
+title Edit ""   "" World Clock ""     "" <&plus>
+header SCR01-ß1 World Clock
+footer Low-fi prototype (wireframe)
+{+
+{
+    .
+    <&clock> | Cupertino | ""                "" <&chevron-right>
+    . | today, 3 hours behind | .
+    ----
+    <&clock> | London | ""                "" <&chevron-right>
+    . | today, 5 hours ahead | .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .    
+}
+{/ <b> World Clock | Alarm | Stop Watch | Timer }
+}
+
+@endsalt
+
