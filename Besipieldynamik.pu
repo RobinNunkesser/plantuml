@@ -1,0 +1,20 @@
+@startuml
+left to right direction
+
+actor :AC01 Akteur 1: as AC01
+actor :AC02 Akteur 2: as AC02
+
+(UC01 Anwendungsfall 1) as (UC01)
+(UC02 Anwendungsfall 2) as (UC02)
+(UC03 Anwendungsfall 3) as (UC03)
+(UCS02-01 Slice 1) as (UCS0201) << Slice >>
+(UCS02-02 Slice 2) as (UCS0202) << Slice >>
+
+AC01 --> (UC01)
+AC01 --> (UC02)
+AC02 --> (UC02)
+AC02 --> (UC03)
+UC02 --> (UCS0201) 
+UC02 --> (UCS0202) 
+
+@enduml
