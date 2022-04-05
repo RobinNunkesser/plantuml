@@ -1,0 +1,37 @@
+@startsalt
+title <&chevron-left> ""      "" Title ""        "" <&info>
+header SCR01 Example
+footer Low-fi prototype (wireframe)
+{+
+{
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+  Login    | "MyName   "
+  Password | "****     "
+  [Send]   | .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .
+    .    
+}
+{
+
+}
+{/ <b> Tab 1 | Tab 2 | Tab 3 | Tab 4  | Tab 5 }
+}
+
+@endsalt
+
