@@ -1,0 +1,14 @@
+@startwbs
++ Anforderungssicht
+++ Kontextsicht
+++ Informationsstruktursicht
+++ Dynamische Sicht
++++ Use-Case-Sicht
++++ Datenflussorientierte Sicht
++++ Kontrollflussorientierte Sicht
++++ Szenariosicht
++++ Zustandsorientierte Sicht
+++ Qualitätssicht
+++ Constraints-Sicht
+@endwbs
+

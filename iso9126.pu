@@ -1,0 +1,32 @@
+@startwbs
++ ISO 9126
+++ Funktionalität
++++ Angemessenheit
++++ Richtigkeit
++++ Interoperabilität
++++ Ordnungsmäßigkeit
++++ Sicherheit	
+++ Zuverlässigkeit
++++ Reife
++++ Fehlertoleranz
++++ Wiederherstellbarkeit
+++ Benutzbarkeit
++++ Attraktivität
++++ Verständlichkeit
++++ Erlernbarkeit
++++ Bedienbarkeit	
+++ Effizienz
++++ Zeitverhalten
++++ Verbrauchverhalten
+++ Änderbarkeit
++++ Analysierbarkeit
++++ Modifizierbarkeit
++++ Stabilität
++++ Prüfbarkeit
+++ Übertragbarkeit
++++ Anpassbarkeit
++++ Installierbarkeit
++++ Konformität
++++ Austauschbarkeit
+@endwbs
+
