@@ -1,0 +1,62 @@
+@startuml
+
+together {
+package "Interface Adapters" {
+component Driving1 [
+test 
+adapter
+] 
+component Driving2 [
+GUI
+adapter
+] 
+component Driving4 [
+app-to-app 
+adapter
+] 
+component Driven1 [
+DB access
+service
+] 
+
+component Driven2 [
+mock in-memory
+database
+] 
+    component Driven3 [
+        email adapter
+    ]
+
+}
+/'component Driving3 [
+http
+adapter
+] '/
+() "Input Port" as Driving
+
+package "Business Rules" {
+component App [
+Use Cases
+]
+component Entities [
+    Entities
+]
+}
+}
+
+() "Output Port 1" as Driven
+() "Output Port 2" as DrivenAPI
+
+Driving - App
+Driven - App
+DrivenAPI - App
+Driving1 ..> Driving 
+Driving2 ..> Driving 
+'Driving3 ..> Driving 
+Driving4 ..> Driving 
+Driven1 ..> Driven
+Driven2 ..> Driven
+Driven3 ..> DrivenAPI
+App o-- Entities
+@enduml
+

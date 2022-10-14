@@ -1,0 +1,17 @@
+@startuml
+
+:user: as AC01
+:Build system: as AC02
+[Html Sanity Check] as CO01
+artifact "local images" as AR01
+artifact "local html file(s)" as AR02
+artifact "external websites & resources" as AR03
+
+AC01 ..> CO01
+AC02 ..> CO01
+CO01 ..> AR01 : checks
+CO01 ..> AR02 : checks
+CO01 ..> AR03 : checks <color:red>* Risk *</color> 
+AR02 ..> AR01 : references
+AR02 ..> AR03 : <<postponed>> \n references  
+@enduml

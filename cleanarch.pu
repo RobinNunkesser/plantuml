@@ -1,0 +1,60 @@
+@startuml
+
+
+package "Display" <<Rectangle>> {
+class View
+class ViewModel
+class Presenter
+}
+
+together {
+interface BoundaryIn
+class Request
+}
+together {
+interface BoundaryOut
+class Response
+}
+
+package "Use Cases" <<Rectangle>> {
+class Interactor
+}
+package "Entities" <<Rectangle>> {
+class Entity1
+class Entity2
+class Entity3
+}
+
+
+interface EntityGateway
+
+package "Database" <<Rectangle>> {
+class EntityGatewayImpl
+class DatabaseAPI
+}
+
+EntityGateway - Interactor
+Interactor o-- Entity1
+Interactor o-- Entity2
+Interactor o-- Entity3
+EntityGatewayImpl - DatabaseAPI
+EntityGatewayImpl - Entity1
+EntityGatewayImpl - Entity2
+EntityGatewayImpl - Entity3
+EntityGateway ..|> EntityGatewayImpl
+
+Request - BoundaryIn
+Response - BoundaryOut
+Response - Interactor
+BoundaryIn <|.. Interactor
+BoundaryOut - Interactor
+
+Request - View
+Response - Presenter
+View - BoundaryIn
+BoundaryOut <|.. Presenter
+Presenter - ViewModel
+View - ViewModel
+
+@enduml
+

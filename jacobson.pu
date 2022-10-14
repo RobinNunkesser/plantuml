@@ -1,0 +1,26 @@
+@startuml
+
+component Interface1 [
+GUI Interface
+]
+
+component Interface2 [
+System Interface
+]
+
+component Control [
+    Control
+]
+
+component Entity [
+    Entity
+]
+
+
+Interface1 <--> Control
+Control <--> Entity
+Control <--> Interface2
+
+
+@enduml
+

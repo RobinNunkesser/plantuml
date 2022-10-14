@@ -1,0 +1,16 @@
+@startuml
+node "hsc development" as NO01 {
+    artifact "<<source>> \n hsc" as AR01
+}
+node "global artifact repository" as NO02 {
+    artifact "<<binary>> \n hsc-core" as AR02
+    artifact "<<binary>> \n hsc-plugin" as AR03
+}
+node "hsc users' computer" as NO03 {
+    artifact "html file(s)" as AR04
+    artifact "build.gradle" as AR05
+}
+AR05 ..> AR02 : internet / https
+AR05 ..> AR03 
+NO01 --> NO02 : internet / https
+@enduml
