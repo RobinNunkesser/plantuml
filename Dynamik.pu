@@ -7,7 +7,7 @@ actor :AC03 Mitarbeiter: as AC03
 ' actor :AC04 Redakteur: as AC04
 
 ' rectangle "SYS03 / SYS04" {
-(UC01 Stundenplan abrufen) as (UC01)
+(UC01 Veranstaltungsliste einsehen) as (UC01)
 (UC02 Veranstaltung exportieren) as (UC02)
 (UC03 Mensaplan abrufen) as (UC03)
 (UC04 Quizfrage ansehen) as (UC04)
@@ -16,8 +16,7 @@ actor :AC03 Mitarbeiter: as AC03
 (UC07 Informieren über Professoren) as (UC07)
 (UC08 Anwendung personalisieren) as (UC08)
 (UCS08-01 Unverträglichkeiten erfassen) as (UCS0801) << Slice >>
-(UCS08-02 Semester einstellen) as (UCS0802) << Slice >>
-(UCS08-03 Statusgruppe einstellen) as (UCS0803) << Slice >>
+(UCS08-02 Statusgruppe einstellen) as (UCS0802) << Slice >>
 
 
 '}
@@ -38,6 +37,5 @@ AC01 --> (UC07)
 AC01 --> (UC08)
 UC08 --> (UCS0801) 
 UC08 --> (UCS0802) 
-UC08 --> (UCS0803) 
 
 @enduml

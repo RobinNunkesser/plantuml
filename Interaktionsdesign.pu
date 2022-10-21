@@ -5,7 +5,7 @@ state "SCR03\nQuiz" as SCR04
 state "SCR02\nMensaplan" as SCR03
 state "<<OS specific>>\nSCR05\nEinstellungen" as SCR09
 state "SCR04\nProfessoren" as SCR06
-state "SCR01\nStundenplan" as SCR02
+state "SCR01\nVeranstaltungen" as SCR02
 }
 [*] --> SCR02
 

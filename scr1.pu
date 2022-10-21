@@ -1,26 +1,24 @@
 @startsalt
-title Stundenplan
+title Veranstaltungen
 header SCR01
 footer Low-fi prototype (wireframe)
 {+
 {
     .
-    .     | Mo  | Di      | Mi   | Do      | Fr
-    8:00  | iOS | .       | iOS  | .       | .
-    9:00  | Dev | .       | Dev  | .       | .
-    10:00 | VL  | .       | ÜB   | .       | .
-    11:00 | .   | .       | .    | .       | .
-    12:00 | .   | Android | .    | Android | .  
-    13:00 | .   | Dev     | .    | Dev     | .  
-    14:00 | .   | VL      | .    | ÜB      | .  
-    15:00 | .   | .       | .    | .       | .
-    16:00 | .   | .       | .    | .       | .
-    17:00 | .   | .       | .    | .       | .
-    18:00 | .   | .       | .    | .       | .
-    .
-    .
-    .
-    .
+    "<&magnifying-glass> Suchbegriff"
+    ==
+    === 3. Semester 
+    ==
+    **Betriebssysteme VL**
+    //Hörsaal HAM 5 (Nunkesser)//
+    Mi 10:30
+    --
+    **Netzwerke VL**
+    //Hörsaal HAM 5 (Nunkesser)//
+    Mi 13:00
+    ==
+    === 7. Semester 
+    ==
     .
     .
     .

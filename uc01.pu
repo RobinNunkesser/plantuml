@@ -1,8 +1,7 @@
 @startuml
 
 start
-:Nutzer wählt Studiengang, Semester und ggfs. Gruppe;
-:Nutzer bekommt den Stundenplan;
+:Nutzer sieht Veranstaltungsliste;
 stop
 @enduml
 
