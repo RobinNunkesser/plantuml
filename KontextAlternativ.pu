@@ -4,22 +4,19 @@ actor :AC01 Studierender: as AC01
 actor :AC02 Dozent: as AC02
 actor :AC03 Mitarbeiter: as AC03
 
-package "Mobile Apps" {
+package "Apps" as PAC01 {
   component [SYS01 iOS App] as SYS03
   component [SYS02 Android App] as SYS04
+  component [SYS03 macOS App] as SYS07
+  component [SYS04 Windows App] as SYS08
 }
 
-package "External Backend I" {
-  component [EXT01 Mensa Server] as SYS06
+package "External Backend I" as PAC03 {
+  component [EXT01 Mensa Server] as SYS05
 }
  
-AC01 - SYS03
-AC01 - SYS04
-AC02 - SYS03
-AC02 - SYS04
-AC03 - SYS03
-AC03 - SYS04
-SYS03 ..> SYS06 : REST/JSON
-SYS04 ..> SYS06 : REST/JSON
-
+AC01 -- PAC01
+AC02 -- PAC01
+AC03 -- PAC01
+PAC01 ..> PAC03 : REST/JSON
 @enduml
