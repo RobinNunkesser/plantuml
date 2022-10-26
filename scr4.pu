@@ -17,33 +17,9 @@ footer Low-fi prototype (wireframe)
     .
     .
     .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
     .    
 }
-{/ Stundenplan | Mensa | Quiz | <b> Profs | Einstellungen }
+{/ Kurse | Mensa | Quiz | <b> Profs | Einstellungen }
 }
 
 @endsalt

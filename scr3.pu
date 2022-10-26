@@ -9,31 +9,7 @@ footer Low-fi prototype (wireframe)
     .
     .
     .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
     === Fragetext
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
     .
     .
     .
@@ -42,7 +18,7 @@ footer Low-fi prototype (wireframe)
     [Falsch] | [ Wahr ]
     [Überspringen] | *
 }
-{/ Stundenplan | Mensa | <b> Quiz | Profs | Einstellungen }
+{/ Kurse | Mensa | <b> Quiz | Profs | Einstellungen }
 }
 
 @endsalt
