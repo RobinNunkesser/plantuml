@@ -22,7 +22,7 @@ footer Low-fi prototype (wireframe)
     .
     .      
 }
-{/ Kurse | Mensa | Quiz | Profs | <b> Einstellungen }
+{/ Kurse | Mensa | Quiz | Profs | <b> <&cog> }
 }
 
 @endsalt

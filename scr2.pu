@@ -9,27 +9,31 @@ footer Low-fi prototype (wireframe)
     == | * | *
     <&image> | Big Veggie Burger | <&chevron-right>
     . | 2,80 € | .
+    -- | * | *
+    . . .
     == | * | *
     === Suppen | *
     == | * | *
     <&image> | Kichererbsensuppe mit Nudeln | <&chevron-right>
     . | 1,80 € | .
+    -- | * | *
+    . . .
     == | * | *
     === Beilagen | *
     == | * | *
     <&image> | Kartoffelgnocchi | <&chevron-right>
     . | 0,60 € | .
+    -- | * | *
+    . . .
     == | * | *
     === Desserts | *
     == | * | *
     <&image> | Schokopudding | <&chevron-right>
     . | 1,20 € | .
-    .
-    .
-    .
-    .
+    -- | * | *
+    . . .
 }
-{/ Kurse | <b>Mensa | Quiz | Profs | Einstellungen }
+{/ Kurse | <b>Mensa | Quiz | Profs | <&cog> }
 }
 @endsalt
 

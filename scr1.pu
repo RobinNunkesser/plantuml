@@ -13,9 +13,7 @@ footer Low-fi prototype (wireframe)
     //Hörsaal HAM 5 (Nunkesser)//
     Mi 10:30
     --
-    **Netzwerke VL**
-    //Hörsaal HAM 5 (Nunkesser)//
-    Mi 13:00
+    . . .
     ==
     === 7. Semester 
     ==
@@ -23,14 +21,10 @@ footer Low-fi prototype (wireframe)
     //H4.3-E00-110 (Nunkesser)//
     Mo 08:30
     --
-    **IT-Consulting VL**
-    //H4.2-E00-110 (Nunkesser)//
-    Do 08:30
-    --
     . . .
     --
 }
-{/ <b>Kurse | Mensa | Quiz | Profs | Einstellungen }
+{/ <b>Kurse | Mensa | Quiz | Profs | <&cog> }
 }
 @endsalt
 

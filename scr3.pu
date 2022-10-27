@@ -18,7 +18,7 @@ footer Low-fi prototype (wireframe)
     [Falsch] | [ Wahr ]
     [Überspringen] | *
 }
-{/ Kurse | Mensa | <b> Quiz | Profs | Einstellungen }
+{/ Kurse | Mensa | <b> Quiz | Profs | <&cog> }
 }
 
 @endsalt
