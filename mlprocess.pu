@@ -1,0 +1,16 @@
+@startuml
+
+start
+:Problemdefinition;
+:Daten vorbereiten;
+:Modell erstellen;
+repeat
+  :Wähle passenden Algorithmus;
+  :Trainiere Modell;
+  :Teste Modell;
+  :Evaluiere Modell;
+repeat while (Trainingsziel erreicht?)
+:Trainiertes Modell deployen;
+stop
+
+@enduml
