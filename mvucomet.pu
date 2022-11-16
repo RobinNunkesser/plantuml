@@ -1,0 +1,13 @@
+@startuml
+left to right direction
+hide members
+
+class Model
+class View
+class Update
+
+Model ..> View : State
+View ..> Update : Bindings / Commands
+Update ..> Model : State changes
+@enduml
+
