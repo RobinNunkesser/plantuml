@@ -1,26 +1,36 @@
 @startuml
 
+together {
 [iOS UI] as UI1 <<SwiftUI>>
-[Android UI] as UI2 <<Jetpack Compose>>
-[App Core] as Core <<Kotlin>>
-[Shared Infrastructure] as Infra1 <<Kotlin>>
-[Android Infrastructure] as Infra2 <<Kotlin>>
 [iOS Infrastructure] as Infra3 <<Swift>>
-[iOS Infrastructure Ports] as Ports1 <<Swift>>
-[iOS UI Ports] as Ports2 <<Swift>>
-[Android Infrastructure Ports] as Ports3 <<Kotlin>>
-[Android UI Ports] as Ports4 <<Kotlin>>
+[iOS Infrastructure Adapters] as Adapt1 <<Swift>>
+}
+together {
+[App Core] as Core <<Kotlin>>
+[UI Ports] as Ports4 <<Kotlin>>
+[Infrastructure Ports] as Ports3 <<Kotlin>>
+[Shared Infrastructure] as Infra1 <<Kotlin>>
+}
+together {
+[Android UI] as UI2 <<Jetpack Compose>>
+[Android Infrastructure] as Infra2 <<Kotlin>>
+[Android Infrastructure Adapters] as Adapt2 <<Kotlin>>
+}
 
-
-UI1 ..> Ports2 : SPM
-UI2 ..> Ports4 : gradle
-Ports2 ..> Core : SPM
-Ports4 ..> Core : gradle
-Core ..> Ports1 : SPM
-Core ..> Ports3 : gradle
-Ports1 ..> Infra1 : SPM
-Ports1 ..> Infra3 : SPM
-Ports3 ..> Infra1 : gradle
-Ports3 ..> Infra2 : gradle
+UI1 --> Ports4 
+UI2 --> Ports4 
+UI1 ..> Core : configure
+UI2 ..> Core : configure
+UI1 ..> Adapt1 : configure
+UI2 ..> Adapt2 : configure
+UI1 ..> Infra1 : configure
+UI2 ..> Infra1 : configure
+Core ..> Ports4
+Core --> Ports3 
+Infra1 --> Ports3
+Infra3 --> Ports3
+Infra2 --> Ports3
+Adapt1 --> Infra3
+Adapt2 --> Infra2
 @enduml
 
