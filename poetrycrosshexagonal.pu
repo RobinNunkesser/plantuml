@@ -1,17 +1,17 @@
 @startuml
 
-together {
+package "Platform dependent (iOS)" {
 [iOS UI] as UI1 <<SwiftUI>>
 [iOS Infrastructure] as Infra3 <<Swift>>
 [iOS Infrastructure Adapters] as Adapt1 <<Swift>>
 }
-together {
+package "Platform independent" {
 [App Core] as Core <<Kotlin>>
 [UI Ports] as Ports4 <<Kotlin>>
 [Infrastructure Ports] as Ports3 <<Kotlin>>
 [Shared Infrastructure] as Infra1 <<Kotlin>>
 }
-together {
+package "Platform dependent (Android)" {
 [Android UI] as UI2 <<Jetpack Compose>>
 [Android Infrastructure] as Infra2 <<Kotlin>>
 [Android Infrastructure Adapters] as Adapt2 <<Kotlin>>
