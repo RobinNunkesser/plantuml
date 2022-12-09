@@ -28,8 +28,8 @@ UI2 ..> Infra1 : configure
 Core ..> Ports4
 Core --> Ports3 
 Infra1 --> Ports3
-Infra3 --> Ports3
-Infra2 --> Ports3
+Adapt1 --> Ports3
+Adapt2 --> Ports3
 Adapt1 --> Infra3
 Adapt2 --> Infra2
 @enduml
