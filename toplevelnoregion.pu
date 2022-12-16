@@ -1,0 +1,24 @@
+@startuml
+
+[*] --> Screen1
+Screen1 --> Screen2
+Screen1 --> Screen3
+Screen1 --> Screen4
+Screen1 --> Screen5
+Screen2 --> Screen1
+Screen2 --> Screen3
+Screen2 --> Screen4
+Screen2 --> Screen5
+Screen3 --> Screen1
+Screen3 --> Screen2
+Screen3 --> Screen4
+Screen3 --> Screen5
+Screen4 --> Screen1
+Screen4 --> Screen2
+Screen4 --> Screen3
+Screen4 --> Screen5
+Screen5 --> Screen1
+Screen5 --> Screen2
+Screen5 --> Screen3
+Screen5 --> Screen4
+@enduml

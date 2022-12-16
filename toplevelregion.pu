@@ -1,0 +1,13 @@
+@startuml
+
+state "Top-level navigation" as TopLevelNavigation
+
+[*] --> TopLevelNavigation
+state TopLevelNavigation {
+[*] --> Screen1
+state Screen2 
+state Screen3 
+state Screen4 
+state Screen5 
+}
+@enduml

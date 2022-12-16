@@ -1,0 +1,35 @@
+@startuml
+
+[*] --> Screen1
+Screen1 --> Screen2
+Screen1 --> Screen3
+Screen1 --> Screen4
+Screen1 --> Screen5
+Screen2 --> Screen1
+Screen2 --> Screen3
+Screen2 --> Screen4
+Screen2 --> Screen5
+Screen3 --> Screen1
+Screen3 --> Screen2
+Screen3 --> Screen4
+Screen3 --> Screen5
+Screen4 --> Screen1
+Screen4 --> Screen2
+Screen4 --> Screen3
+Screen4 --> Screen5
+Screen5 --> Screen1
+Screen5 --> Screen2
+Screen5 --> Screen3
+Screen5 --> Screen4
+
+state "Top-level navigation" as TopLevelNavigation
+
+state TopLevelNavigation {
+    state "Screen1" as Scr1
+[*] --> Scr1
+state "Screen2" as Scr2 
+state "Screen3" as Scr3 
+state "Screen4" as Scr4
+state "Screen5" as Scr5
+}
+@enduml
