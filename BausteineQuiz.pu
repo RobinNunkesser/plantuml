@@ -23,7 +23,7 @@ package Ports {
 
 }
 
-together {
+package ".NET MAUI APP" {
 class "Quiz UI" as QuizView {
 	QuizViewModel viewModel
 }

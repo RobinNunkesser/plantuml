@@ -69,7 +69,7 @@ package Ports {
 
 }
 
-package Adapters {
+package Infrastructure {
         class MealRepository {
         Meal Retrieve(int id)
         Meal[] RetrieveAll()        
@@ -77,7 +77,7 @@ package Adapters {
 
 }
 
-
+package ".NET MAUI APP" {
 class "Mensa UI" as MensaView {
 	MensaViewModel viewModel
 }
@@ -86,6 +86,7 @@ class MensaViewModel {
 	Meal[] soups
 	Meal[] sideDishes
 	Meal[] desserts
+}
 }
 
 

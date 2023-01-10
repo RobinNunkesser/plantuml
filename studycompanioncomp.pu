@@ -1,0 +1,47 @@
+@startuml
+
+package ".NET MAUI App" {
+component Driving1 [
+StudyCompanion
+] 
+}
+
+() "StudyCompanion.Ports" as Driving
+
+
+package Core {
+component App [
+StudyCompanion.Core
+]
+component Tests2 [
+StudyCompanion.Core.Tests
+]
+}
+
+package Infrastructure {
+component Driven1 [
+StudyCompanion.Infra
+]
+
+component Tests1 [
+StudyCompanion.Infra.Tests
+]
+
+component Driven2 [
+StudyCompanion.Infra.Mock
+] 
+}
+
+Driving - App
+Driving1 ..> Driving 
+Driven1 ..> Driving
+Driven2 ..> Driving
+Driving1 --> App
+Driving1 --> Driven1
+Driving1 --> Driven2
+Tests1 --> Driven1
+Tests2 --> App
+Tests2 --> Driven1
+Tests2 --> Driven2
+@enduml
+
