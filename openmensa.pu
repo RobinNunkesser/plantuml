@@ -1,0 +1,15 @@
+@startjson
+{
+    "id": 10900,
+    "name": "Hähnchenschnitzel mit Brötchen",
+    "notes": [
+
+    ],
+    "prices": {
+      "pupils": 2.4,
+      "others": 4.3
+    },
+    "category": "Cafeteria Heiße Theke"
+  }
+@endjson
+
