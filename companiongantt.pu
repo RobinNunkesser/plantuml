@@ -1,31 +1,28 @@
 @startgantt
-[Projektmanagement] lasts 18 days
-[Qualitätssicherung] lasts 18 days
-[I0] lasts 2 days
-[Inception Gate] happens at [I0]'s end
-[E0] lasts 2 days
-[E0] starts at [Inception Gate]'s end
-[E1] lasts 2 days
-[E1] starts at [E0]'s end
-[E2] lasts 2 days
-[E2] starts at [E1]'s end
-[E3] lasts 2 days
-[E3] starts at [E2]'s end
-[Elaboration Gate] happens at [E3]'s end
-[Grundgerüst und Navigation] lasts 2 days
+[Projektmanagement] lasts 42 days
+[Qualitätssicherung] lasts 42 days
+[Idee und Vision] lasts 5 days
+[Inception Gate] happens at [Idee und Vision]'s end
+[Anforderungen] lasts 5 days
+[Anforderungen] starts at [Inception Gate]'s end
+[Architektur] lasts 5 days
+[Architektur] starts at [Anforderungen]'s end
+[Benutzerschnittstelle] lasts 5 days
+[Benutzerschnittstelle] starts at [Architektur]'s end
+[Elaboration Gate] happens at [Benutzerschnittstelle]'s end
+[Grundgerüst und Navigation] lasts 5 days
 [Grundgerüst und Navigation] starts at [Elaboration Gate]'s end
-[Quiz] lasts 2 days
+[Quiz] lasts 5 days
 [Quiz] starts at [Grundgerüst und Navigation]'s end
-[Mensa UI und Settings] lasts 2 days
+[Mensa UI und Settings] lasts 5 days
 [Mensa UI und Settings] starts at [Grundgerüst und Navigation]'s end
-[Mensa Geschäftslogik] lasts 2 days
+[Mensa Geschäftslogik] lasts 5 days
 [Mensa Geschäftslogik] starts at [Mensa UI und Settings]'s end
-[Veranstaltungen] lasts 2 days
+[Veranstaltungen] lasts 5 days
 [Veranstaltungen] starts at [Grundgerüst und Navigation]'s end
-[Professoren] lasts 2 days
+[Professoren] lasts 5 days
 [Professoren] starts at [Grundgerüst und Navigation]'s end
 [Construction Gate] happens at [Mensa Geschäftslogik]'s end
-[T0] lasts 2 days
-[T0] starts at [Construction Gate]'s end
-[Transition Gate] happens at [T0]'s end
+[Inbetriebnahme] lasts 5 days
+[Inbetriebnahme] starts at [Construction Gate]'s end
 @endgantt
