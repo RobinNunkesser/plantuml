@@ -1,0 +1,31 @@
+
+@startmindmap
+* .
+** HelloWorld
+*** App.xaml
+*** App.xaml.cs
+*** AppShell.xaml
+*** AppShell.xaml.cs
+*** HelloWorld.csproj
+*** MainPage.xaml
+*** MainPage.xaml.cs
+*** MauiProgram.cs
+*** Platforms
+**** Android
+**** MacCatalyst
+**** Tizen
+**** Windows
+**** iOS
+*** Properties
+'**** launchSettings.json
+*** Resources
+**** AppIcon
+**** Fonts
+**** Images
+**** Raw
+**** Splash
+**** Styles
+** HelloWorld.sln
+'** bin
+'** obj
+@endmindmap

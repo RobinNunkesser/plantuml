@@ -3,7 +3,7 @@
 state Tabs {
 state "SCR03\nQuiz" as SCR04
 state "SCR02\nMensaplan" as SCR03
-state "<<OS specific>>\nSCR05\nEinstellungen" as SCR09
+state "SCR05\nEinstellungen" as SCR09
 state "SCR04\nProfessoren" as SCR06
 state "SCR01\nVeranstaltungen" as SCR02
 }
@@ -13,10 +13,12 @@ state "SCR06 Statistik" as SCR07
 state "<<WebView>>\nSCR07\nWebanzeige" as SCR11
 state "SCR08\nAllergene" as SCR13
 state "SCR09\nZusatzstoffe" as SCR12
+state "SCR10\nLizenzen" as SCR14
 
 
 SCR04 --> SCR07 : tap[Statistics Button]
 SCR06 --> SCR11 : tap[Prof]
 SCR09 --> SCR12 : tap[Zusatzstoffe]
 SCR09 --> SCR13 : tap[Allergene]
+SCR09 --> SCR14 : tap[Lizenzen]
 @enduml

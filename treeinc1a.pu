@@ -1,0 +1,78 @@
+
+@startmindmap
+* .
+** .github
+*** workflows
+**** main.yaml
+** StudyCompanion
+' ' *** App.xaml
+' ' *** App.xaml.cs
+' *** AppShell.xaml
+' *** AppShell.xaml.cs
+' *** StudyCompanion.csproj
+' ' *** MainPage.xaml
+' ' *** MainPage.xaml.cs
+' *** MauiProgram.cs
+' *** ServiceHelper.cs
+' *** LocalizeExtension.cs
+' ' *** Platforms
+' ' **** Android
+' ' **** MacCatalyst
+' ' **** Tizen
+' ' **** Windows
+' ' **** iOS
+' ' *** Properties
+' '**** launchSettings.json
+' *** Common
+' *** Tabs
+' **** Courses
+' ***** CoursesPage.xaml
+' ***** CoursesPage.xaml.cs
+' **** Mensa
+' ***** MensaPage.xaml
+' ***** MensaPage.xaml.cs
+' **** Profs
+' ***** ProfsPage.xaml
+' ***** ProfsPage.xaml.cs
+' **** Quiz
+' ***** QuizPage.xaml
+' ***** QuizPage.xaml.cs
+' ***** QuizStatisticsPage.xaml
+' ***** QuizStatisticsPage.xaml.cs
+' **** Settings
+' ***** AcknowledgementsPage.xaml
+' ***** AcknowledgementsPage.xaml.cs
+' ***** AdditivesPage.xaml
+' ***** AdditivesPage.xaml.cs
+' ***** AllergensPage.xaml
+' ***** AllergensPage.xaml.cs
+' ***** SettingsPage.xaml
+' ***** SettingsPage.xaml.cs
+' *** Resources
+' ' **** AppIcon
+' ' **** Fonts
+' **** Images
+' ***** courses.svg
+' ***** mensa.svg
+' ***** profs.svg
+' ***** quiz.svg
+' ***** settings.svg
+' ***** statistics.svg
+' **** Raw
+' ***** acknowledgements.html
+' ' **** Splash
+' **** Strings
+' ***** AppResources.resx
+' ***** AppResources.Designer.cs
+' ***** AppResources.de.resx
+' ' **** Styles
+' ** StudyCompanion.sln
+' '** bin
+' '** obj
+** StudyCompanion.Core
+** StudyCompanion.Core.Tests
+** StudyCompanion.Infra
+** StudyCompanion.Infra.Mock
+** StudyCompanion.Infra.Tests
+** StudyCompanion.Ports
+@endmindmap

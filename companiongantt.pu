@@ -10,18 +10,18 @@
 [Benutzerschnittstelle] lasts 5 days
 [Benutzerschnittstelle] starts at [Architektur]'s end
 [Elaboration Gate] happens at [Benutzerschnittstelle]'s end
-[Grundgerüst und Navigation] lasts 5 days
-[Grundgerüst und Navigation] starts at [Elaboration Gate]'s end
+[Grundgerüst] lasts 5 days
+[Grundgerüst] starts at [Elaboration Gate]'s end
 [Quiz] lasts 5 days
-[Quiz] starts at [Grundgerüst und Navigation]'s end
+[Quiz] starts at [Grundgerüst]'s end
 [Mensa UI und Settings] lasts 5 days
-[Mensa UI und Settings] starts at [Grundgerüst und Navigation]'s end
+[Mensa UI und Settings] starts at [Grundgerüst]'s end
 [Mensa Geschäftslogik] lasts 5 days
 [Mensa Geschäftslogik] starts at [Mensa UI und Settings]'s end
 [Veranstaltungen] lasts 5 days
-[Veranstaltungen] starts at [Grundgerüst und Navigation]'s end
+[Veranstaltungen] starts at [Grundgerüst]'s end
 [Professoren] lasts 5 days
-[Professoren] starts at [Grundgerüst und Navigation]'s end
+[Professoren] starts at [Grundgerüst]'s end
 [Construction Gate] happens at [Mensa Geschäftslogik]'s end
 [Inbetriebnahme] lasts 5 days
 [Inbetriebnahme] starts at [Construction Gate]'s end

@@ -1,0 +1,27 @@
+
+@startmindmap
+* Tabs
+** Courses
+*** CoursesPage.xaml
+*** CoursesPage.xaml.cs
+** Mensa
+*** MensaPage.xaml
+*** MensaPage.xaml.cs
+** Profs
+*** ProfsPage.xaml
+*** ProfsPage.xaml.cs
+** Quiz
+*** QuizPage.xaml
+*** QuizPage.xaml.cs
+*** QuizStatisticsPage.xaml
+*** QuizStatisticsPage.xaml.cs
+** Settings
+*** AcknowledgementsPage.xaml
+*** AcknowledgementsPage.xaml.cs
+*** AdditivesPage.xaml
+*** AdditivesPage.xaml.cs
+*** AllergensPage.xaml
+*** AllergensPage.xaml.cs
+*** SettingsPage.xaml
+*** SettingsPage.xaml.cs
+@endmindmap

@@ -1,0 +1,26 @@
+@startuml
+
+package "StudyCompanion" {
+component 1 [
+Common
+] 
+component 2 [
+    Mensa
+]
+component 3 [
+Quiz
+]
+component 4 [
+Settings
+]
+component 5 [
+Courses
+]
+component 6 [
+Profs
+]
+}
+
+
+@enduml
+
