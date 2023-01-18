@@ -13,12 +13,10 @@ state "SCR06 Statistik" as SCR07
 state "<<WebView>>\nSCR07\nWebanzeige" as SCR11
 state "SCR08\nAllergene" as SCR13
 state "SCR09\nZusatzstoffe" as SCR12
-state "SCR10\nLizenzen" as SCR14
-
 
 SCR04 --> SCR07 : tap[Statistics Button]
 SCR06 --> SCR11 : tap[Prof]
 SCR09 --> SCR12 : tap[Zusatzstoffe]
 SCR09 --> SCR13 : tap[Allergene]
-SCR09 --> SCR14 : tap[Lizenzen]
+SCR09 --> SCR11 : tap[Lizenzen]
 @enduml
