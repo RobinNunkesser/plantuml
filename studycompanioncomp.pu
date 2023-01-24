@@ -16,6 +16,9 @@ StudyCompanion.Core
 component Tests2 [
 StudyCompanion.Core.Tests
 ]
+component Mock1 [
+StudyCompanion.Core.Mock
+] 
 }
 
 package Infrastructure {
@@ -36,6 +39,8 @@ Driving - App
 Driving1 ..> Driving 
 Driven1 ..> Driving
 Driven2 ..> Driving
+Mock1 ..> Driving
+Driving1 --> Mock1
 Driving1 --> App
 Driving1 --> Driven1
 Driving1 --> Driven2

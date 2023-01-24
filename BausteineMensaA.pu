@@ -67,19 +67,6 @@ package Ports {
 		double Others
 	}
 
-        interface IMealCollection {
-                Category category
-                IMeal[] IMeals
-        }
-
-        interface IMealQuery {
-                int mensa
-                Date date
-        }
-
-        interface IGetMealsService {
-               IMealCollection[] Execute(IMealQuery query)
-        }
 
 }
 
@@ -95,53 +82,19 @@ package Infrastructure {
 
 }
 
-package Core {
-        class GetMealsService {
 
-        }
-
-        class MealCollection {
-
-        }
-}
-
-package ".NET MAUI APP" {
-class "Mensa UI" as MensaView {
-	MensaViewModel viewModel
-}
-class MensaViewModel {
-	IMealCollection[] meals
-}
-class MealQuery {
-
-}
-}
-
-IGetMealsService -- IMealCollection
-IGetMealsService -- IMealQuery
-IMealCollection -- IMeal
-IMealCollection -- Category
 IMeal -- Category
 IMeal -- Allergens
 IMeal -- Additives
 IMeal -- IPrice
-MensaView o-- MensaViewModel
-MensaViewModel -- MealDataSource
-MensaViewModel -- IMealCollection
-IMealCollection <|-- MealCollection
 IDataSource <|-- MealDataSource
-IMealQuery <|-- MealQuery
 IMeal <|-- Meal
 IPrice <|-- Price
 Meal -- Price
 MealDataSource -- Meal
-IGetMealsService <|-- GetMealsService
-MensaView -- MealQuery
-GetMealsService ..> MensaView : injected
 'IGetMealsService -- MensaView 
-MealDataSource ..> GetMealsService : injected
 'IDataSource -- GetMealsService
-GetMealsService -- MealCollection
+'GetMealsService -- IDataSource
 
 @enduml
 
