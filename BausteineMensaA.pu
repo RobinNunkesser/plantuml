@@ -1,5 +1,12 @@
 @startuml
 
+package ".NET MAUI APP" as App {
+
+}
+package Core {
+
+}
+
 package Ports {
 		interface IDataSource<TId, TEntity> {
 		TEntity Retrieve(TId id)
@@ -80,6 +87,11 @@ package Infrastructure {
 
         class Price {}
 
+        class OpenMensaAPI {
+                Meal[] GetTodaysMeals(int id)
+
+        }
+
 }
 
 
@@ -95,6 +107,10 @@ MealDataSource -- Meal
 'IGetMealsService -- MensaView 
 'IDataSource -- GetMealsService
 'GetMealsService -- IDataSource
+MealDataSource -- OpenMensaAPI
+OpenMensaAPI -- Meal
+MealDataSource ..> Core : inject IDataSource
+Core ..> App : inject IGetMealsService
 
 @enduml
 

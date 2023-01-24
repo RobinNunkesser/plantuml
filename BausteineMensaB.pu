@@ -1,47 +1,10 @@
 @startuml
 
+package ".NET MAUI APP" as App {
+
+}
+
 package Ports {
-		interface IDataSource<TId, TEntity> {
-		TEntity Retrieve(TId id)
-		TEntity[] RetrieveAll()
-	}
-
-	class Additives << enumeration >> {
-        None
-        FoodColoring
-        Preservatives
-        Antioxidants
-        FlavorEnhancer
-        Phosphate
-        Sulphureted
-        Waxed
-        Blackend
-        Sweetener
-        Phenylalanine
-        Taurine
-        NitritePicklingSalt
-        Caffeinated
-        Quinine
-        MilkProtein
-	}
-
-	class Allergens << enumeration >> {
-        None
-        Gluten
-        Shellfish
-        Eggs
-        Fish
-        Peanuts
-        Soy
-        Milk
-        Nuts
-        Celery
-        Mustard
-        Sesame
-        Sulfur
-        Lupine
-        Mollusk
-    }
 
 	class Category << enumeration >> {
 		none
@@ -51,21 +14,9 @@ package Ports {
 		soup
 	}
 
-	interface IMeal {
-		{field} Date date
-		{field} String name
-		{field} IPrice IPrice
-		{field} Allergens allergens
-		{field} Additives additives
-		{field} Category category
-		{field} URL image		
+	package IMeal {
 	}
 
-	interface IPrice {
-		double Students
-		double Employees
-		double Others
-	}
 
         interface IMealCollection {
                 Category category
@@ -81,17 +32,15 @@ package Ports {
                IMealCollection[] Execute(IMealQuery query)
         }
 
+        		interface IDataSource<TId, TEntity> {
+		TEntity Retrieve(TId id)
+		TEntity[] RetrieveAll()
+	}
+
+
 }
 
 package Infrastructure {
-        class MealDataSource {
-        IMeal Retrieve(int id)
-        IMeal[] RetrieveAll()        
-        }
-
-        class Meal {}
-
-        class Price {}
 
 }
 
@@ -110,24 +59,17 @@ IGetMealsService -- IMealQuery
 IMealCollection -- IMeal
 IMealCollection -- Category
 IMeal -- Category
-IMeal -- Allergens
-IMeal -- Additives
-IMeal -- IPrice
 IMealCollection <|-- MealCollection
-IDataSource <|-- MealDataSource
-IMeal <|-- Meal
-IPrice <|-- Price
-Meal -- Price
-MealDataSource -- Meal
 IGetMealsService <|-- GetMealsService
 'IGetMealsService -- MensaView 
-IDataSource ..> GetMealsService : injected
+'IDataSource ..> GetMealsService : injected
 'IDataSource -- GetMealsService
 GetMealsService -- MealCollection
 'GetMealsService -- IDataSource
 GetMealsService -- IMealQuery
-MealCollection -- Category
-MealCollection -- IMeal
+Infrastructure ..> GetMealsService : inject IDataSource
+GetMealsService ..> App : inject IGetMealsService
+IDataSource <|-- Infrastructure
 
 @enduml
 

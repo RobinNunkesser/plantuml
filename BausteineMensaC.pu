@@ -3,9 +3,7 @@
 package Ports {
 
 
-        interface IMealCollection {
-                Category category
-                IMeal[] IMeals
+        package IMealCollection {
         }
 
         interface IMealQuery {
@@ -19,17 +17,14 @@ package Ports {
 
 }
 
-package Core {
-        class GetMealsService {
+package Infrastructure {
 
-        }
-
-        class MealCollection {
-
-        }
 }
 
-package ".NET MAUI APP" {
+package Core {
+}
+
+package ".NET MAUI APP" as App {
 class "Mensa UI" as MensaView {
 	MensaViewModel viewModel
 }
@@ -45,14 +40,15 @@ IGetMealsService -- IMealCollection
 IGetMealsService -- IMealQuery
 MensaView o-- MensaViewModel
 MensaViewModel -- IMealCollection
-IMealCollection <|-- MealCollection
 IMealQuery <|-- MealQuery
-IGetMealsService <|-- GetMealsService
 MensaView -- MealQuery
-GetMealsService ..> MensaView : injected
 'IGetMealsService -- MensaView 
 'IDataSource -- GetMealsService
-GetMealsService -- MealCollection
+Infrastructure ..> Core : inject IDataSource
+Core ..> MensaView : inject IGetMealsService
+MensaView -- IGetMealsService
+Core <|-- IGetMealsService
+
 
 @enduml
 
