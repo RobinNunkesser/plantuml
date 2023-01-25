@@ -1,27 +1,27 @@
 
 @startmindmap
 * .
-' ** StudyCompanion
-' ' *** App.xaml
-' ' *** App.xaml.cs
-' ' *** AppShell.xaml
-' ' *** AppShell.xaml.cs
-' ' *** StudyCompanion.csproj
-' ' *** MainPage.xaml
-' ' *** MainPage.xaml.cs
-' *** MauiProgram.cs
-' ' *** ServiceHelper.cs
-' ' *** LocalizeExtension.cs
-' ' *** Platforms
-' ' **** Android
-' ' **** MacCatalyst
-' ' **** Tizen
-' ' **** Windows
-' ' **** iOS
-' ' *** Properties
-' '**** launchSettings.json
-' *** Common
-' **** SectionViewModel.cs
+** StudyCompanion
+' *** App.xaml
+' *** App.xaml.cs
+' *** AppShell.xaml
+' *** AppShell.xaml.cs
+' *** StudyCompanion.csproj
+' *** MainPage.xaml
+' *** MainPage.xaml.cs
+*** MauiProgram.cs
+' *** ServiceHelper.cs
+' *** LocalizeExtension.cs
+' *** Platforms
+' **** Android
+' **** MacCatalyst
+' **** Tizen
+' **** Windows
+' **** iOS
+' *** Properties
+'**** launchSettings.json
+'*** Common
+'**** SectionViewModel.cs
 ' *** Tabs
 ' ' **** Courses
 ' ' ***** CoursesPage.xaml
@@ -71,34 +71,40 @@
 ' ***** AppResources.resx
 ' ' ***** AppResources.Designer.cs
 ' ***** AppResources.de.resx
-' ' **** Styles
-' ' ** StudyCompanion.sln
-' '** bin
-' '** obj
+' **** Styles
+' ** StudyCompanion.sln
+'** bin
+'** obj
 ** StudyCompanion.Core
+'** StudyCompanion.Core.Mock
+*** OpenMensaGetMealsService.cs
 *** MealCollection.cs
-*** Price.cs
-** StudyCompanion.Core.Mock
-*** MockGetMealsService.cs
-*** MockMeal.cs
-*** MockPrice.cs
-*** Mocks.cs
 ' ** StudyCompanion.Core.Tests
-' ** StudyCompanion.Infra
+** StudyCompanion.Infra
+*** Canteen.cs
+*** Day.cs
+*** Extensions.cs
+*** Meal.cs
+*** OpenMensaAPI.cs
+*** OpenMensaMeal.cs
+*** OpenMensaMealDataSource.cs
+*** Price.cs
+*** StudyCompanion.Infra.csproj
 '** StudyCompanion.Infra.Mock
 '*** MockMealDataSource.cs
-' ** StudyCompanion.Infra.Tests
+** StudyCompanion.Infra.Tests
+*** UnitTest1.cs
 ** StudyCompanion.Ports
-*** Additives.cs
-*** Allergens.cs
-*** Category.cs
-'*** IDataSource.cs
-*** IGetMealsService.cs
-*** IMeal.cs
-*** IMealCollection.cs
-*** IMealQuery.cs
-*** IPrice.cs
-*** IService.cs
+' *** Additives.cs
+' *** Allergens.cs
+' *** Category.cs
+*** IDataSource.cs
+' *** IGetMealsService.cs
+' *** IMeal.cs
+' *** IMealCollection.cs
+' *** IMealQuery.cs
+' *** IPrice.cs
+' *** IService.cs
 '*** IQuestion.cs
 '*** IYesNoQuestion.cs
 @endmindmap
