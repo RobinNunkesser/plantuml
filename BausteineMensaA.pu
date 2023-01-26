@@ -13,41 +13,11 @@ package Ports {
 		TEntity[] RetrieveAll()
 	}
 
-	class Additives << enumeration >> {
-        None
-        FoodColoring
-        Preservatives
-        Antioxidants
-        FlavorEnhancer
-        Phosphate
-        Sulphureted
-        Waxed
-        Blackend
-        Sweetener
-        Phenylalanine
-        Taurine
-        NitritePicklingSalt
-        Caffeinated
-        Quinine
-        MilkProtein
+	package Additives  {
 	}
 
-	class Allergens << enumeration >> {
-        None
-        Gluten
-        Shellfish
-        Eggs
-        Fish
-        Peanuts
-        Soy
-        Milk
-        Nuts
-        Celery
-        Mustard
-        Sesame
-        Sulfur
-        Lupine
-        Mollusk
+	package Allergens  {
+
     }
 
 	class Category << enumeration >> {

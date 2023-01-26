@@ -79,7 +79,8 @@
 '** StudyCompanion.Core.Mock
 *** OpenMensaGetMealsService.cs
 *** MealCollection.cs
-' ** StudyCompanion.Core.Tests
+** StudyCompanion.Core.Tests
+*** UnitTest1.cs
 ** StudyCompanion.Infra
 *** Canteen.cs
 *** Day.cs

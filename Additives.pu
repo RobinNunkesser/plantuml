@@ -1,0 +1,25 @@
+@startuml
+
+	class Additives << enumeration >> {
+        None
+        FoodColoring
+        Preservatives
+        Antioxidants
+        FlavorEnhancer
+        Phosphate
+        Sulphureted
+        Waxed
+        Blackend
+        Sweetener
+        Phenylalanine
+        Taurine
+        NitritePicklingSalt
+        Caffeinated
+        Quinine
+        MilkProtein
+	}
+
+
+
+@enduml
+

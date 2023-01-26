@@ -1,0 +1,26 @@
+@startuml
+
+
+
+	class Allergens << enumeration >> {
+        None
+        Gluten
+        Shellfish
+        Eggs
+        Fish
+        Peanuts
+        Soy
+        Milk
+        Nuts
+        Celery
+        Mustard
+        Sesame
+        Sulfur
+        Lupine
+        Mollusk
+    }
+
+
+
+@enduml
+
