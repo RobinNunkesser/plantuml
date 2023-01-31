@@ -1,0 +1,134 @@
+
+@startmindmap
+* .
+** StudyCompanion
+' *** App.xaml
+' *** App.xaml.cs
+' *** AppShell.xaml
+' *** AppShell.xaml.cs
+' *** StudyCompanion.csproj
+' *** MainPage.xaml
+' *** MainPage.xaml.cs
+' *** MauiProgram.cs
+' *** ServiceHelper.cs
+' *** LocalizeExtension.cs
+*** Platforms
+**** Android
+***** AndroidManifest.xml
+***** Plugin
+****** Calendars
+**** iOS
+***** Info.plist
+***** Plugin
+****** Calendars
+**** MacCatalyst
+***** Info.plist
+***** Plugin
+****** Calendars
+' **** Tizen
+**** Windows
+***** Package.appxmanifest
+***** Plugin
+****** Calendars
+' *** Properties
+' **** launchSettings.json
+*** Common
+**** DateConverter.cs
+' **** SectionViewModel.cs
+*** Plugin
+**** Calendars
+' ***** Abstractions
+' ****** Calendar.cs
+' ****** CalendarEvent.cs
+' ****** CalendarEventReminder.cs
+' ****** ICalendars.cs
+' ****** ICalendarsExtensions.cs
+' ****** NullableAttributes.cs
+' ****** PlatformException.cs
+' ***** CalendarsImplementation.cs
+' ***** CrossCalendars.cs
+*** Tabs
+**** Courses
+***** CoursesPage.xaml
+***** CoursesPage.xaml.cs
+***** CoursesViewModel.cs
+' **** Mensa
+' ***** MealQuery.cs
+' ***** MensaPage.xaml
+' ***** MensaPage.xaml.cs
+' ***** MensaViewModel.cs
+' ***** PriceConverter.cs
+' **** Profs
+' ***** ProfsPage.xaml
+' ***** ProfsPage.xaml.cs
+' **** Quiz
+' ***** QuizPage.xaml
+' ***** QuizPage.xaml.cs
+' ***** QuizStatisticsPage.xaml
+' ***** QuizStatisticsPage.xaml.cs
+' ***** QuizViewModel.cs
+' **** Settings
+' ***** AcknowledgementsPage.xaml
+' ***** AcknowledgementsPage.xaml.cs
+' ***** AdditivesPage.xaml
+' ***** AdditivesPage.xaml.cs
+' ***** AdditivesViewModel.cs
+' ***** AllergensPage.xaml
+' ***** AllergensPage.xaml.cs
+' ***** AllergensViewModel.cs
+' ***** Settings.cs
+' ***** SettingsPage.xaml
+' ***** SettingsPage.xaml.cs
+' ***** SettingsViewModel.cs
+'*** Resources
+' **** AppIcon
+' **** Fonts
+' **** Images
+' ***** courses.svg
+' ***** mensa.svg
+' ***** profs.svg
+' ***** quiz.svg
+' ***** settings.svg
+' ***** statistics.svg
+' **** Raw
+' ***** acknowledgements.html
+' **** Splash
+'**** Strings
+'***** AppResources.resx
+' ***** AppResources.Designer.cs
+'***** AppResources.de.resx
+' **** Styles
+' ** StudyCompanion.sln
+'** bin
+'** obj
+' ** StudyCompanion.Core
+** StudyCompanion.Core.Mock
+' *** Meal.cs
+' *** MockGetMealsService.cs
+*** MockCourse.cs
+*** MockGetCoursesService.cs
+' *** MockMealCollection.cs
+' *** Mocks.cs
+' *** Price.cs
+' ** StudyCompanion.Core.Tests
+' ** StudyCompanion.Infra
+'** StudyCompanion.Infra.Mock
+'*** MockMealDataSource.cs
+' ** StudyCompanion.Infra.Tests
+** StudyCompanion.Ports
+' *** Additives.cs
+' *** Allergens.cs
+' *** Category.cs
+*** ICourse.cs
+' *** ICourseCollection.cs
+*** IGetCoursesService.cs
+'*** IDataSource.cs
+' *** IGetMealsService.cs
+' *** IMeal.cs
+' *** IMealCollection.cs
+' *** IMealQuery.cs
+' *** IPrice.cs
+' *** IService.cs
+'*** IQuestion.cs
+'*** IYesNoQuestion.cs
+@endmindmap
