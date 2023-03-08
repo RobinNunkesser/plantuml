@@ -1,0 +1,51 @@
+@startuml
+
+package Ports {
+
+  interface ICourse {
+        string Name 
+        string Room 
+        string Lecturer 
+        string Detail 
+        string StartDate 
+        int Semester 
+        int Length 
+  }
+
+          interface IGetCoursesService {
+               ICourse[] Execute()
+        }
+
+}
+
+package Core {
+        class GetCoursesService {
+
+        }
+
+        class Course {
+
+        }
+}
+
+package ".NET MAUI APP" {
+class "Course UI" as CourseView {
+	CourseViewModel viewModel
+}
+class CourseViewModel {
+	ICourse[] courses
+}
+}
+
+IGetCoursesService -- ICourse
+CourseView o-- CourseViewModel
+CourseViewModel -- ICourse
+ICourse <|-- Course
+IGetCoursesService <|-- GetCoursesService
+GetCoursesService ..> CourseView : injected
+'IGetCoursesService -- MensaView 
+'IDataSource -- GetCoursesService
+GetCoursesService -- Course
+
+@enduml
+

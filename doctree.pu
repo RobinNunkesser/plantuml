@@ -1,0 +1,22 @@
+
+@startmindmap
+* Dokumentation
+** Projektvision
+** Anforderungen
+*** Anforderungsquellen
+*** Randbedingungen
+*** Kontext
+*** Domäne
+*** Dynamik
+** Technik und Architektur
+*** Entwurfsentscheidungen
+*** Systembeschreibung
+*** Interne und externe Schnittstellen
+*** Bausteinsicht
+*** Detaillierte Abläufe
+** Benutzerschnittstellen
+*** Interaktionsdesign
+*** Benutzerschnittstellendesign
+*** Visuelles Design
+** Glossar
+@endmindmap

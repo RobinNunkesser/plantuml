@@ -1,0 +1,70 @@
+@startuml
+
+class Photo {
+	int albumId
+	int id
+	string title 
+	string url
+	string thumbnailUrl
+}
+
+class Comment {
+ int postId
+ int id
+ string name
+ string email
+ string body
+}
+
+class Album {
+	int userId
+	int id
+	string title
+}
+
+class Post {
+            int userId
+            int id
+            string title
+            string body
+        }
+
+class User {
+	int id
+	string username
+    string email
+	Address address
+	string phone
+	string website
+	Company company
+}
+
+class Company {
+  string name
+  string catchPhrase
+  string bs
+}
+
+class GeoPosition {
+  double lat
+  double lng
+}
+
+class Address {
+  string street
+  string suite
+  string city
+  string zipcode
+  GeoPosition geo
+}
+
+Address "1" -- "1" GeoPosition
+User "1" -- "1" Address
+User "1" -- "1" Company
+User "1" -- "many" Post
+Comment "many" -- "1" Post
+Album "many" -- "1" User
+Photo "many" -- "1" Album
+
+@enduml
+

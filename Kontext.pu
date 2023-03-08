@@ -1,5 +1,23 @@
 @startuml
 
+legend
+Akteure
+* Studierende der Hochschule (AC01)
+* Dozenten der Hochschule (AC02)
+* Mitarbeiter der Hochschule (AC03)
+* Redakteur der Hochschule (AC04)
+Existierende Systeme
+* Server des Mensadienstleisters (EXT01)
+* Server für die Internetpräsenz der Hochschule (EXT02)
+* Datenbank der Hochschule (EXT03)
+Geplante Systeme
+* App für iOS (SYS01)
+* App für Android (SYS02)
+* App für macOS (SYS03)
+* App für Windows (SYS04)
+* Server für die zu erstellenden Apps (SYS05)
+end legend
+
 actor :AC01 Studierender: as AC01
 actor :AC02 Dozent: as AC02
 actor :AC03 Mitarbeiter: as AC03
