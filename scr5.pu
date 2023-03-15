@@ -1,15 +1,14 @@
 @startsalt
-title Einstellungen
-header SCR05
-footer Low-fi prototype (wireframe)
 {+
+""         "" Einstellungen
+--
 {
     .
-    Statusgruppe | <&chevron-right>
+    Statusgruppe | ""           "" <&chevron-right>
     ----
-    Allergene | <&chevron-right>
+    Allergene | ""           "" <&chevron-right>
     ----
-    Zusatzstoffe | <&chevron-right>
+    Zusatzstoffe | ""           "" <&chevron-right>
     .
     .
     .

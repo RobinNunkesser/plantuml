@@ -1,8 +1,7 @@
 @startsalt
-title Mensa
-header SCR02
-footer Low-fi prototype (wireframe)
 {+
+""           "" Mensa
+--
 {
     == | * | * 
     === Essen | *

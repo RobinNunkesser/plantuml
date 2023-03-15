@@ -1,8 +1,7 @@
 @startsalt
-title Veranstaltungen
-header SCR01
-footer Low-fi prototype (wireframe)
 {+
+""        "" Veranstaltungen
+--
 {
     .
     "<&magnifying-glass> Suchbegriff"

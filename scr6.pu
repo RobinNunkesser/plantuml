@@ -1,17 +1,16 @@
 @startsalt
-title <&chevron-left> Statistik
-header SCR06
-footer Low-fi prototype (wireframe)
 {+
+""           "" Statistik
+--
 {
     .    
-    Bearbeitete Fragen | 10
+    Bearbeitete Fragen | ""          "" 10
     ----
-    Richtig beantwortet | 7
+    Richtig beantwortet | ""           "" 7
     ----
-    Falsch beantwortet | 1
+    Falsch beantwortet | ""           "" 1
     ----
-    Übersprungen | 2
+    Übersprungen | ""           "" 2
     .
     .
     .

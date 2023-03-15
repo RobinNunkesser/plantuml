@@ -1,8 +1,7 @@
 @startsalt
-title Edit ""   "" World Clock ""     "" <&plus>
-header SCR01-01 World Clock
-footer Low-fi prototype (wireframe)
 {+
+Edit ""         "" <b>World Clock ""           "" <&plus>
+--
 {
     .
     <&clock> | Cupertino | ""                "" <&chevron-right>
@@ -10,17 +9,6 @@ footer Low-fi prototype (wireframe)
     ----
     <&clock> | London | ""                "" <&chevron-right>
     . | today, 5 hours ahead | .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
-    .
     .
     .
     .

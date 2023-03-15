@@ -1,8 +1,7 @@
 @startsalt
-title Quiz <&info>
-header SCR03
-footer Low-fi prototype (wireframe)
 {+
+""            "" Quiz ""           "" <&info>
+--
 {
     .
     .

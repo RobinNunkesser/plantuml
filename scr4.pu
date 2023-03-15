@@ -1,15 +1,14 @@
 @startsalt
-title Professoren
-header SCR04
-footer Low-fi prototype (wireframe)
 {+
+""          "" Professoren
+--
 {
     .
     "Name" | <&magnifying-glass>
-    Prof. Dr. Bernasconi | <&chevron-right>
+    Prof. Dr. Bernasconi | ""          "" <&chevron-right>
     Mobile Computing | .
     ----
-    Prof. Dr. Moriarty | <&chevron-right>
+    Prof. Dr. Moriarty | ""          "" <&chevron-right>
     Mathematik | .
     .
     .
