@@ -1,0 +1,44 @@
+@startuml
+
+interface IActorTemplate
+class PlayerBullet
+class Player
+class PlayerSpawner
+class ScenesManager
+class GameManager
+class EnemySpawner
+class Enemy
+class EnemyBullet
+class PlayerShipBuild
+class ScoreManager
+class ShopPiece
+class SOShopSelection
+class SOActorModel
+
+PlayerBullet --> IActorTemplate
+Player --> IActorTemplate
+PlayerSpawner --> IActorTemplate
+EnemyBullet --> IActorTemplate
+Enemy --> IActorTemplate
+EnemySpawner --> IActorTemplate
+PlayerBullet -- Player
+PlayerBullet -- SOActorModel
+Player -- GameManager
+Player -- PlayerSpawner
+Player -- SOActorModel
+PlayerSpawner -- SOActorModel
+PlayerSpawner -- GameManager
+GameManager -- ScenesManager
+GameManager -- PlayerShipBuild
+GameManager -- ScoreManager
+PlayerShipBuild -- ShopPiece
+ShopPiece -- SOShopSelection
+GameManager -- Enemy
+GameManager -- EnemySpawner
+EnemySpawner -- SOActorModel
+Enemy -- SOActorModel
+Enemy -- EnemySpawner
+Enemy -- EnemyBullet
+EnemyBullet -- SOActorModel
+@enduml
+
