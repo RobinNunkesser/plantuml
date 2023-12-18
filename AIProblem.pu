@@ -1,0 +1,32 @@
+@startuml
+
+interface IProblem<TState,TAction> {
+	TState InitialState
+	Func<TState, bool> GoalTest
+	Func<TState, List<TAction>> Actions
+	Func<TState, TAction, TState> Result
+	Func<TState, TAction, TState, double> StepCosts
+}
+
+interface IAgent<TPercept, TState, TAction> {
+	bool Alive
+	IProblem<TState, TAction> Problem
+	TAction? Act(TPercept percept)	
+}
+
+
+class SearchAgent {
+	ISearchForActions<TState, TAction> search
+}
+
+interface ISearchForActions<TState, TAction> {
+	TAction[]? FindActions(IProblem<TState, TAction> problem)
+}
+
+
+IAgent <|.. SearchAgent
+IAgent --- IProblem
+SearchAgent --- ISearchForActions
+
+@enduml
+
