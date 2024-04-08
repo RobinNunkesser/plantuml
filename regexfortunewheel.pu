@@ -1,0 +1,3 @@
+@startregex
+t[^rstlnempca]{4} [^rstlnempca]{2}r[^rstlnempca]{3}t
+@endregex

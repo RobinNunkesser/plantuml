@@ -1,0 +1,22 @@
+
+@startmindmap
+* Machine Learning Types
+** Supervised Learning
+*** Continuous Target Variable
+**** Regression
+*** Categorical Target Variable
+**** Classification
+** Unsupervised Learning
+*** Target variable not available
+**** Clustering
+**** Association
+** Semi-supervised Learning
+*** Categorical Target Variable
+**** Classification
+**** Clustering
+** Reinforcement Learning
+*** Categorical Target Variable
+**** Classification
+*** Target variable not available
+**** Control
+@endmindmap
