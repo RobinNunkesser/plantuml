@@ -1,0 +1,17 @@
+@startuml
+
+state Communications {
+state Applications {
+    state "Operating Systems" as OS {
+        state Programming {
+            state Hardware {
+                state Information {
+                    
+                }
+            }
+        }
+    }
+}
+}
+
+@enduml
