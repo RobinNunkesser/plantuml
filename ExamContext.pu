@@ -1,0 +1,62 @@
+@startuml
+left to right direction
+
+actor :AC01 Student: as AC01
+actor :AC02 Professor: as AC02
+
+package "User Interfaces" as PAC01 {
+  package "Exam Generator" as PAC06 {
+  component [UI01 macOS Console] as UI01
+  component [UI02 Windows Console] as UI02
+  component [UI03 macOS App] as UI03
+  component [UI04 Windows App] as UI04
+  }
+  package "Apps" as PAC04 {
+  component [UI05 iOS App] as UI05
+  component [UI06 Android App] as UI06
+  component [UI07 macOS App] as UI07
+  component [UI08 Windows App] as UI08
+  }
+}
+
+package "Core" as PAC02 {
+  package "Domain" as PAC05 {
+  component [DOM01 Domain] as DOM01
+  }
+  component [COR01 Exam Generator Core] as COR01
+  component [COR02 Apps Core] as COR02
+}
+
+package "Infrastructure" as PAC03 {
+  component [INF01 PDF Generator] as INF01
+  component [INF02 External Exercises] as INF02
+}
+
+interface "Ports" as INT01
+interface "Ports" as INT02
+'interface "App Ports" as INT01
+'interface "ExamGenerator Ports" as INT02
+'interface "Common Core Ports" as INT03
+'interface "Apps Core Ports" as INT04
+'interface "ExamGenerator Core Ports" as INT05
+ 
+AC01 -- PAC04
+AC02 -- PAC06
+AC02 -- PAC04
+'INT01 -- PAC04
+'INT02 -- UI01
+'INT01 -- COR01
+'INT01 -- COR02
+'INT02 -- COR01
+'INT02 -- COR03
+'INT03 -- COR01
+'INT04 -- COR03
+'INT05 -- COR02
+'INT05 -- INF01
+'INT05 -- INF02
+'INT03 -- INF02
+INT01 -- PAC01
+INT01 -- PAC02
+INT02 -- PAC02
+INT02 -- PAC03
+@enduml
