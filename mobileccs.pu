@@ -1,0 +1,72 @@
+
+@startmindmap
+* <s>General and reference</s>
+** <s>Document types</s>
+*** <s>Surveys and overviews</s>
+** <s>Cross-computing tools and techniques</s>
+*** <s>Empirical studies</s>
+*** <s>Metrics</s>
+*** <s>Evaluation</s>
+* <s>Software and its engineering</s>
+** <s>Software organization and properties</s>
+*** <s>Contextual software domains</s>
+**** <s>Software infrastructure</s>
+**** <s>Operating systems</s>
+***** <s>Process management</s>
+****** <s>Power management</s>
+*** <s>Software system structures</s>
+**** <s>Software architectures</s>
+**** <s>Distributed systems organizing principles</s>
+***** <s>Cloud computing</s>
+*** <s>Software functional properties</s>
+**** <s>Correctness</s>
+**** <s>Formal methods</s>
+***** <s>Automated static analysis</s>
+***** <s>Dynamic analysis</s>
+*** <s>Extra-functional properties</s>
+**** <s>Interoperability</s>
+**** <s>Software performance</s>
+**** <s>Software reliability</s>
+**** <s><b>Software safety</b></s>
+**** <s><b>Software usability</b></s>
+** <s>Software notations and tools</s>
+*** <s>System description languages</s>
+**** <s>System modeling languages</s>
+*** <s>Development frameworks and environments</s>
+** <s>Software creation and management</s>
+*** <s>Designing Software</s>
+*** <s>Software development process management</s>
+*** <s>Software development techniques</s>
+**** <s><b>Reusability</b></s>
+*** <s>Software verification and validation</s>
+**** <s>Software defect analysis</s>
+***** <s><b>Software testing and debugging</b></s>
+**** <s>Process validation</s>
+***** <s>Acceptance testing</s>
+*** <s>Software post-development issues</s>
+* <s>Security and privacy</s>
+** <s>Systems security</s>
+*** <s>Operating systems security</s>
+**** <s>Mobile platform security</s>
+** <s>Network security</s>
+*** <s>Mobile and wireless security</s>
+* <s>Human-centered computing</s>
+** <s>Ubiquitous and mobile computing</s>
+*** <s>Theory, concepts and paradigms</s>
+**** <s>Mobile computing</s>
+*** <s>Ubiquitous and mobile devices</s>
+**** <s>Smartphones</s>
+*** <s>Design and evaluation methods</s>
+*** <s>Empirical studies</s>
+** <s>Accessibility</s>
+* <s>Computing methodologies</s>
+** <s>Artificial intelligence</s>
+* <s>Wasserman</s>
+** <s>User Experience </s>
+** <s>Code reuse</s>
+** <s>Networking</s>
+** <s>Energy efficiency</s>
+** <s>Data integrity</s>
+** <s>Testing</s>
+** <s>Portability and cross-platform development</s>
+@endmindmap
