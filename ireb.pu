@@ -8,7 +8,7 @@ if "Daten prüfen" then
 else
   -->[Daten nicht ok] "Fehler ausgeben"
   -->"Daten eingeben"
-endif
+endif 
 
 @enduml
 

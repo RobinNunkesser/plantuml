@@ -1,0 +1,26 @@
+@startuml
+left to right direction
+
+state "Ready/T<sub>0</sub>" as T0
+state "Play Title/T<sub>1</sub>" as T1
+state "Play Title/T<sub>2</sub>" as T2
+state "Play Title/T<sub>3</sub>" as T3
+'[*] -[hidden]-> T0
+T0 --> T0 : ¬P
+T0 --> T1 : P
+T1 --> T0 : P
+T1 -[hidden]-> T1 : ¬P⋀¬V⋀¬R⋀¬B 
+T1 --> T2 : V⋁B
+'T1 -[hidden]-> T2 : ¬P⋀(V⋁B)
+T1 -[hidden]-> T3 : R
+'T1 -[hidden]-> T3 : ¬P⋀R
+T2 --> T0 : P
+T2 --> T1 : R
+T2 -[hidden]-> T2 : ¬P⋀¬V⋀¬R⋀¬B
+T2 -[hidden]-> T3 : V⋁B
+T3 -[hidden]-> T0 : P
+T3 -[hidden]-> T1 : V⋁B
+T3 -[hidden]-> T2 : R
+T3 -[hidden]-> T3 : ¬P⋀¬V⋀¬R⋀¬B
+
+@enduml

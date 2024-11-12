@@ -1,90 +1,95 @@
 
 @startmindmap
-* Software and its engineering
-** Organization and properties
-'** Software organization and properties
-*** <s>Contextual domains</s>
-'*** <s>Contextual software domains</s>
-**** <s>Infrastructure</s>
-'**** <s>Software infrastructure</s>
-**** <s>Operating systems</s>
-***** <s>Process management</s>
-****** <s>Power management</s>
-*** System structures
-'*** Software system structures
-**** Architectures
-'**** Software architectures
-**** System models
-'**** Software system models
-**** Distributed systems organizing principles
-'***** <s>Cloud computing</s>
-*** <s>Functional properties</s>
-'*** <s>Software functional properties</s>
-**** <s>Correctness</s>
-**** <s>Formal methods</s>
-***** <s>Automated static analysis</s>
-***** <s>Dynamic analysis</s>
-*** Extra-functional properties
-**** <s>Interoperability</s>
-**** <b>Performance</b>
-**** Reliability
-**** <b>Safety</b>
-**** <b>Usability</b>
-'**** <b>Software performance</b>
-'**** <s>Software reliability</s>
-'**** <b>Software safety</b>
-'**** <b>Software usability</b>
-** Notations and tools
-'** Software notations and tools
-*** Context specific languages
-*** System description languages
-*** Development frameworks and environments
-*** Libraries and repositories
-** Creation and management
-'** Software creation and management
-*** Designing Software
-*** Development process management
-'*** Software development process management
-*** Development techniques
-'*** Software development techniques
-**** <b>Reusability</b>
-*** Verification and validation
-'*** Software verification and validation
-**** <b>Defect analysis</b>
-'**** <b>Software defect analysis</b>
-**** Process validation
-'***** <s>Acceptance testing</s>
-**** Empirical verification
-'**** Empirical software verification
-*** Post-development issues
-'*** Software post-development issues
-**** Maintainance
-'**** Maintaining Software
-* <s>Security and privacy</s>
-** <s>Systems security</s>
-*** <s>Operating systems security</s>
-**** <s>Mobile platform security</s>
-** <s>Network security</s>
-*** <s>Mobile and wireless security</s>
-* Human-centered computing
-** Ubiquitous and mobile computing
-*** <s>Theory, concepts and paradigms</s>
-**** <s>Mobile computing</s>
-*** <s>Ubiquitous and mobile devices</s>
-**** <s>Smartphones</s>
-*** <s>Design and evaluation methods</s>
-*** Empirical studies
-** <s>Accessibility</s>
-* <s>Computing methodologies</s>
-** <s>Artificial intelligence</s>
-* Professional topics
-** Computing education
-'* <s>Wasserman</s>
-'** <s>User Experience </s>
-'** <s>Code reuse</s>
-'** <s>Networking</s>
-'** <s>Energy efficiency</s>
-'** <s>Data integrity</s>
-'** <s>Testing</s>
-'** <s>Portability and cross-platform development</s>
+* CCS
+** Software and its engineering
+*** Organization and properties
+'*** Software organization and properties
+**** Contextual domains
+'**** <s>Contextual software domains</s>
+***** Infrastructure
+'***** <s>Software infrastructure</s>
+' ***** <s>Operating systems</s>
+' ****** <s>Process management</s>
+' ******* <s>Power management</s>
+**** System structures
+'**** Software system structures
+***** Architectures
+'***** Software architectures
+***** System models
+'***** Software system models
+***** Distributed systems organizing principles
+'****** <s>Cloud computing</s>
+**** Functional properties
+'**** <s>Software functional properties</s>
+***** Correctness
+***** Formal methods
+**** Extra-functional properties
+***** Interoperability
+***** <b>Performance</b>
+***** Reliability
+***** <b>Safety</b>
+***** <b>Usability</b>
+'***** <b>Software performance</b>
+'***** <s>Software reliability</s>
+'***** <b>Software safety</b>
+'***** <b>Software usability</b>
+*** Notations and tools
+'*** Software notations and tools
+**** Compilers
+**** Context specific languages
+**** System description languages
+**** Development frameworks and environments
+**** Libraries and repositories
+*** Creation and management
+'*** Software creation and management
+**** Designing Software
+**** Development process management
+'**** Software development process management
+**** Development techniques
+'**** Software development techniques
+***** <b>Reusability</b>
+**** Verification and validation
+'**** Software verification and validation
+***** <b>Defect analysis</b>
+'***** <b>Software defect analysis</b>
+***** Process validation
+'****** <s>Acceptance testing</s>
+***** Empirical validation
+'***** Empirical software validation
+**** Post-development issues
+'**** Software post-development issues
+***** Reverse engineering
+***** Maintainance
+'***** Maintaining Software
+***** Evolution
+** Security and privacy
+*** Intrusion/anomaly detection and malware mitigation
+**** Malware and its mitigation
+' *** <s>Systems security</s>
+' **** <s>Operating systems security</s>
+' ***** <s>Mobile platform security</s>
+' *** <s>Network security</s>
+' **** <s>Mobile and wireless security</s>
+** Human-centered computing
+*** Ubiquitous and mobile computing
+' **** <s>Theory, concepts and paradigms</s>
+' ***** <s>Mobile computing</s>
+' **** <s>Ubiquitous and mobile devices</s>
+' ***** <s>Smartphones</s>
+' **** <s>Design and evaluation methods</s>
+**** Empirical studies
+*** Accessibility
+' ** <s>Computing methodologies</s>
+' *** <s>Artificial intelligence</s>
+** Professional topics
+*** Computing education
+** Applied Computing
+'** <s>Wasserman</s>
+'*** <s>User Experience </s>
+'*** <s>Code reuse</s>
+'*** <s>Networking</s>
+'*** <s>Energy efficiency</s>
+'*** <s>Data integrity</s>
+'*** <s>Testing</s>
+'*** <s>Portability and cross-platform development</s>
 @endmindmap
