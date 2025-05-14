@@ -1,0 +1,25 @@
+@startuml
+
+interface IEstimator<TTransformer : ITransformer> 
+{
+    TTransformer Fit(IDataView input)
+    SchemaShape GetOutputSchema(SchemaShape inputSchema)
+    Append(IEstimator<TTransformer> estimator, TransformerScope scope)
+}
+
+interface ITransformer 
+{
+    IDataView Transform(IDataView input)
+    DataViewSchema GetOutputSchema(DataViewSchema inputSchema)
+}
+
+interface ICanSaveModel
+{
+    void Save(ModelSaveContext ctx)
+}
+
+ICanSaveModel <|-- ITransformer
+ITransformer <-- IEstimator
+
+@enduml
+

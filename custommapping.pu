@@ -1,0 +1,91 @@
+@startuml
+
+hide footbox
+
+participant User
+
+participant EstimatorChain [
+    =EstimatorChain
+    ----
+    ""Microsoft.ML.Data""
+]
+
+
+participant MyCustomTrainer [
+    =MyTrainer
+]
+
+participant Context [
+    =MLContext
+    ----
+    ""Microsoft.ML""
+]
+
+participant CustomMappingEstimator [
+    =CustomMappingEstimator
+    ----
+    ""Microsoft.ML.Transforms""
+]
+
+participant MyCustomMapping [
+    =MyMapping
+]
+
+participant TransformerChain [
+    =TransformerChain
+    ----
+    ""Microsoft.ML.Data""
+]
+
+
+User -> EstimatorChain: Fit
+activate EstimatorChain
+create MyCustomTrainer
+EstimatorChain -> MyCustomTrainer: new
+activate MyCustomTrainer
+create MyCustomMapping
+MyCustomTrainer -> MyCustomMapping: new
+MyCustomTrainer -> Context: CustomMapping
+activate Context
+create CustomMappingEstimator
+Context -> CustomMappingEstimator: new
+activate CustomMappingEstimator
+CustomMappingEstimator -> MyCustomMapping: GetMapping
+activate MyCustomMapping
+return: Action
+deactivate MyCustomMapping
+return
+deactivate CustomMappingEstimator
+deactivate MyCustomTrainer
+EstimatorChain -> MyCustomTrainer: GetOutputSchema
+activate MyCustomTrainer
+MyCustomTrainer -> CustomMappingEstimator: GetOutputSchema
+activate CustomMappingEstimator
+return: SchemaShape
+return: SchemaShape
+deactivate Context
+deactivate MyCustomTrainer
+EstimatorChain -> MyCustomTrainer: Fit
+activate MyCustomTrainer
+MyCustomTrainer -> CustomMappingEstimator: Fit
+activate CustomMappingEstimator
+create TransformerChain
+CustomMappingEstimator -> TransformerChain: new
+return: TransformerChain
+return: TransformerChain
+EstimatorChain --> User: TransformerChain
+deactivate CustomMappingEstimator
+deactivate MyCustomTrainer
+deactivate EstimatorChain
+User -> TransformerChain: Transform
+User -> Context: Evaluate
+activate Context
+Context -> CustomMappingEstimator: Transform (lazy)
+activate CustomMappingEstimator
+CustomMappingEstimator -> MyCustomMapping: Map
+deactivate CustomMappingEstimator
+return: Metrics
+deactivate Context
+
+
+@enduml

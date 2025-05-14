@@ -1,0 +1,37 @@
+@startuml
+
+class Room {
+	UUID id
+	RoomType type
+	String name
+	Device[] devices
+	Double dailyExpenses
+	Double monthlyExpenses
+	Double yearlyExpenses
+}
+
+class Device {
+	UUID id
+	String name
+	Date dayTime
+	Date nightTime
+	Int power
+	bool isOn
+	Double dayExpenses
+	Double nightExpenses
+	Double expenses
+}
+
+enum RoomType {
+	Bedroom
+	Kitchen
+	LivingRoom
+	Bathroom
+	Other
+}
+
+RoomType <- Room
+Room --* Device
+
+@enduml
+

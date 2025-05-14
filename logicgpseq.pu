@@ -1,0 +1,67 @@
+@startuml
+
+hide footbox
+
+participant User
+
+participant Context [
+    =MLContext
+    ----
+    ""Microsoft.ML""
+]
+
+participant Trainer [
+    =logicGPTrainer
+    ----
+    ""logicGP""
+]
+
+participant Algorithm [
+    =logicGPAlgorithm
+    ----
+    ""logicGP""
+]
+
+participant GPAlgorithmPort [
+    =IGeneticProgram
+    ----
+    ""Ports.Algorithms""
+]
+
+participant GPAlgorithmAdapter [
+    =GeneticProgram
+    ----
+    ""Adapters.Algorithms""
+]
+
+participant Model [
+    =ITransformer
+    ----
+    ""Microsoft.ML""
+]
+
+
+
+
+group Classification Task
+    group Load Data
+        User -> Context: CSV File
+        User <-- Context: IDataView
+    end   
+    group Train
+        User -> Trainer: Train
+        Trainer -> Algorithm: Train
+        Algorithm -> GPAlgorithmPort: Run
+        GPAlgorithmPort -> GPAlgorithmAdapter: Run
+        GPAlgorithmPort <-- GPAlgorithmAdapter: IIndividualList
+        Algorithm <-- GPAlgorithmPort: IIndividualList
+        Trainer <-- Algorithm: IIndividualList
+        User <-- Trainer: ITransformer
+    end
+    group Predict
+        User -> Model: Predict
+        User <-- Model: Prediction
+    end
+end
+
+@enduml

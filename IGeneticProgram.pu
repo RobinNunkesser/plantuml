@@ -1,0 +1,23 @@
+@startuml
+
+
+    interface IGeneticProgram
+    {
+        ISearchSpace SearchSpace
+        int Generation
+        IInitialization Initialization
+        IIndividualList Population
+        IEnumerable<IStoppingCriterion> StoppingCriteria
+        ISelection SelectionForMutation
+        IEnumerable<IMutation> Mutations
+        ISelection SelectionForCrossover
+        IEnumerable<ICrossover> Crossovers
+        IFitnessFunction FitnessFunction
+        ISelection SelectionForSurvival
+        InitPopulation()
+        IIndividualList Run()
+    }
+
+  
+@enduml
+

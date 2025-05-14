@@ -1,0 +1,26 @@
+@startuml
+
+
+actor :AC01 User: as AC01
+
+cloud "Data Sources" as PAC04 {
+}
+
+package "Energy Applications" as PAC01 {
+  component [SYS01 App] as SYS03
+  component [SYS02 Energy Application Backend] as SYS04
+  cloud "Third Party Applications" as SYS07
+}
+
+cloud "Energy Application Services" as PAC02  {
+  
+}
+
+
+SYS03 <..> SYS04 : REST/JSON 
+SYS04 <..> SYS07 : REST
+AC01 -- SYS03
+PAC02 ..> SYS04 : REST
+PAC04 ..> PAC02
+
+@enduml
