@@ -1,0 +1,24 @@
+@startuml
+
+interface IFeatures
+{
+    float[] Features 
+}
+
+
+class ClassificationInput 
+{
+
+}
+
+
+class RegressionInput 
+{
+
+}
+
+
+IFeatures <|.. ClassificationInput
+IFeatures <|.. RegressionInput
+@enduml
+

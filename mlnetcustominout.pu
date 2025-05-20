@@ -1,0 +1,73 @@
+@startuml
+
+interface IScoreScalar
+{
+    float Score 
+}
+
+interface IScoreVector
+{
+    VBuffer<float> Score 
+}
+
+interface IProbablilityScalar
+{
+    float Probablility
+}
+
+interface IProbablilityVector
+{
+    VBuffer<float> Probablility 
+}
+
+interface IFeatures
+{
+    float[] Features 
+}
+
+interface IPredictedLabel
+{
+    uint PredictedLabel 
+}
+
+class ClassificationInput 
+{
+
+}
+
+interface IClassificationOutput 
+{
+
+}
+
+class RegressionInput 
+{
+
+}
+
+class RegressionOutput 
+{
+
+}
+
+class BinaryClassificationOutput {
+
+}
+
+class MulticlassClassificationOutput {
+    
+}
+
+
+IFeatures <|.. ClassificationInput
+IFeatures <|.. RegressionInput
+IScoreScalar <|.. RegressionOutput
+IPredictedLabel <|-- IClassificationOutput
+IClassificationOutput <|.. BinaryClassificationOutput
+IScoreScalar <|.. BinaryClassificationOutput
+IProbablilityScalar <|.. BinaryClassificationOutput
+IClassificationOutput <|.. MulticlassClassificationOutput
+IScoreVector <|.. MulticlassClassificationOutput
+IProbablilityVector <|.. MulticlassClassificationOutput
+@enduml
+
