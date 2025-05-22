@@ -1,22 +1,41 @@
 @startjson
 {
-  "Scenario": "Classification",
-  "DataSource": {
-    "Version": 3,
-    "EscapeCharacter": "\"",
-    "ReadMultiLines": false
-  },
+  "Scenario": [
+    "Classification",
+    "Regression",
+    "Recommendation",
+    "ImageClassification",
+    "ObjectDetection",
+    "Forecasting",
+    "TextClassification",
+    "SentenceSimilarity",
+    "QuestionAnswer",
+    "NamedEntityRecognition"
+    ],
+  "DataSource": "...",
+  "Environment": "...",
   "TrainingOption": {
-    "Version": 2,
-    "Subsampling": false,
-    "Type": "ClassificationTrainingOption",
-    "TrainingTime": 20,
-    "LabelColumn": "col1",
-    "ValidationOption": {
-      "Version": 0,
+    "AvailableTrainers": [
+      "LBFGS",
+      "LGBM",
+      "SDCA",
+      "FASTTREE",
+      "RANDOMFOREST"
+    ],
+    "ValidationOption": [
+        {
       "Type": "TrainValidateSplitValidationOption",
-      "SplitRatio": 0.1
-    }
+      "SplitRatio": "..."
+       },
+       {
+      "Type": "CrossValidationValidationOption",
+      "NumberOfFolds": "..."
+       },
+       {
+      "Type": "FileValidationOption",
+      "FilePath": "..."
+       }
+    ]
   }
 }
 @endjson
