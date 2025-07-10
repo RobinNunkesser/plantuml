@@ -1,0 +1,16 @@
+@startuml
+
+class Explainer
+{
+    ITransformer Model
+    IDataView Data
+    ScenarioType Scenario
+    string LabelColumnName
+    string GetPermutationFeatureImportance(Metric metric)
+    string GetCustomExplanationA()
+    ...()
+}
+
+
+@enduml
+

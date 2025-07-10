@@ -1,0 +1,41 @@
+@startuml
+
+' class TreeEnsembleModelParameters {
+'     InternalTreeEnsemble TrainedEnsemble
+'     int NumTrees
+' }
+
+class ModelParametersBase {
+}
+
+
+' class InternalTreeEnsemble {
+'     IEnumerable<InternalRegressionTree> Trees
+' }
+
+' class "Gam*Parameters" as GamParameters
+' class GamModelParametersBase
+
+interface IPredictionTransformer<TModel> {
+    TModel Model
+}
+
+' class "FastTree*Parameters" as FastTreeParameters {}
+' class "FastForest*Parameters" as FastForestParameters {}
+' class TreeEnsembleModelParametersBasedOnQuantileRegressionTree {}
+' class TreeEnsembleModelParametersBasedOnRegressionTree {}
+
+
+IPredictionTransformer --> ModelParametersBase
+' ModelParametersBase <|-- TreeEnsembleModelParameters
+' TreeEnsembleModelParameters --> InternalTreeEnsemble
+' ModelParametersBase <|-- GamModelParametersBase
+' GamModelParametersBase <|-- GamParameters
+
+' TreeEnsembleModelParameters <|-- TreeEnsembleModelParametersBasedOnRegressionTree
+' TreeEnsembleModelParameters <|-- TreeEnsembleModelParametersBasedOnQuantileRegressionTree
+' TreeEnsembleModelParametersBasedOnQuantileRegressionTree <|-- FastForestParameters
+' TreeEnsembleModelParametersBasedOnRegressionTree <|-- FastTreeParameters
+
+@enduml
+
